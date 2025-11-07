@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "Cl8PMb7cnh7Cqnwh8r35kUgYUvPuINODlu5bw5pldVHdBtnkSZpqRG/InVxn3GYVGV9e5VuFyw1dGuBbAMtCPw==",
+  "success": true,
+  "projectFilePath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.API/MagmaAssessment.API.csproj",
+  "expectedPackageFiles": [
+    "/home/brunohenss/.nuget/packages/microsoft.aspnetcore.openapi/8.0.21/microsoft.aspnetcore.openapi.8.0.21.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/mongodb.bson/2.23.1/mongodb.bson.2.23.1.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

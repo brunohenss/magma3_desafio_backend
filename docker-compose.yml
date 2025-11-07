@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: magma_mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: magma_assessment
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - magma_network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: magma_backend_desafio
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__MongoDB=mongodb://root:example@mongodb:27017/magma_assessment?authSource=admin
+      - ApiKeys__GoogleMaps=${GOOGLE_MAPS_API_KEY}
+      - ApiKeys__DocuSign__IntegrationKey=${DOCUSIGN_INTEGRATION_KEY}
+      - ApiKeys__DocuSign__UserId=${DOCUSIGN_USER_ID}
+      - ApiKeys__MicrosoftGraph__ClientId=${MICROSOFT_GRAPH_CLIENT_ID}
+      - ApiKeys__MicrosoftGraph__ClientSecret=${MICROSOFT_GRAPH_CLIENT_SECRET}
+      - Logging__LogLevel__Default=Information
+      - Logging__LogLevel__Microsoft.AspNetCore=Warning
+    ports:
+      - "5000:8080"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - magma_network
+    volumes:
+      - ./logs:/app/logs
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: magma_mongo_express
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongodb:27017/
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: pass
+    depends_on:
+      - mongodb
+    networks:
+      - magma_network
+
+networks:
+  magma_network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+    driver: local

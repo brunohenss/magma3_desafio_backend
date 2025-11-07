@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "mLOFdCHETfX99kUHfcQ7qQ6wyTwtRHip39N/TXvQVBfTUn4x9mUFg9zqoRhgedS/e2w94u7VCvqd0AWl3PzP6w==",
+  "success": true,
+  "projectFilePath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/home/brunohenss/.nuget/packages/mongodb.bson/2.23.1/mongodb.bson.2.23.1.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/home/brunohenss/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
