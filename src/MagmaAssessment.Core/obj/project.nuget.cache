@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TUX3dgoQDiilAZdsWcnHmzrhkgPpcpQIcFmpFFe6m1x+/GLI+9c5A/2xxpU9P+EPln43J9EwfW5/Zgl7g/l1jg==",
+  "dgSpecHash": "ksIcpm0xTAgi7j4D30COn1Zj4McHr3rfNt3aZmGTUCdL11IrrpaVLCMfBwcxJY3v+Y8FB6txBHI2DXtcgzSg+w==",
   "success": true,
-  "projectFilePath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
+  "projectFilePath": "/home/brunohenss/Link para Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
   "expectedPackageFiles": [
     "/home/brunohenss/.nuget/packages/mongodb.bson/2.23.1/mongodb.bson.2.23.1.nupkg.sha512",
     "/home/brunohenss/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",

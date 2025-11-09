@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MagmaAssessment.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+741909c81563c55fd64d74ca9fc232d881d51491")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43a860adc70f1f173120008de0092ee714b4ab41")]
 [assembly: System.Reflection.AssemblyProductAttribute("MagmaAssessment.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MagmaAssessment.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LJHreFm09UqsX45sZ+9LOL9qiT9h4XeOVpigtGyvP/Nx68TyNkbVCsmKxIuFSqtLX3+hBznseDI5A6wTTBWCOA==",
+  "dgSpecHash": "ieo5YnA+9SusbMxsunbWnhxYvqulVShVGckHoBOUxDxIMvBvvTFK9638OAxJt790F//qBH+9v0MKzlfEY0C92w==",
   "success": true,
-  "projectFilePath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj",
+  "projectFilePath": "/home/brunohenss/Link para Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/brunohenss/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/home/brunohenss/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
