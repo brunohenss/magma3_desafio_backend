@@ -6,6 +6,7 @@
 /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/obj/Debug/net8.0/MagmaAssessment.Core.AssemblyInfoInputs.cache
 /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/obj/Debug/net8.0/MagmaAssessment.Core.AssemblyInfo.cs
 /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/obj/Debug/net8.0/MagmaAssessment.Core.csproj.CoreCompileInputs.cache
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/obj/Debug/net8.0/MagmaAssessment.Core.sourcelink.json
 /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/obj/Debug/net8.0/MagmaAssessment.Core.dll
 /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/obj/Debug/net8.0/refint/MagmaAssessment.Core.dll
 /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/obj/Debug/net8.0/MagmaAssessment.Core.pdb

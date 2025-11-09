@@ -177,6 +177,52 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.10.4, )"
+            },
+            "DocuSign.eSign.dll": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "GoogleMaps.LocationServices": {
+              "target": "Package",
+              "version": "[1.2.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http.Polly": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[5.38.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.23.1, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,9 +1,13 @@
+using MagmaAssessment.Core.Interfaces;
+using MagmaAssessment.Infrastructure.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHttpClient<IForce1Service, Force1Service>();
 
 var app = builder.Build();
 
@@ -16,29 +20,29 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+app.MapGet("/ativos", async (IForce1Service force1Service) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    var ativos = await force1Service.ObterTodosAtivos();
+    return Results.Ok(ativos);
 })
-.WithName("GetWeatherForecast")
+.WithName("GetAtivos")
 .WithOpenApi();
 
-app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+app.MapGet("/computadores-inativos", async (IForce1Service force1Service) =>
 {
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+    var computadoresInativos = await force1Service.ObterComputadoresInativos();
+    return Results.Ok(computadoresInativos);
+})
+.WithName("GetComputadoresInativos")
+.WithOpenApi();
+
+app.MapGet("/ativo/{id}", async (string id, IForce1Service force1Service) =>
+{
+    var ativo = await force1Service.ObterAtivoPorId(id);
+    return ativo is not null ? Results.Ok(ativo) : Results.NotFound();
+})
+.WithName("GetAtivoPorId")
+.WithOpenApi();
+
+
+app.Run();
