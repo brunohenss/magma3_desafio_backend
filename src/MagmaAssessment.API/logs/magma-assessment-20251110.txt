@@ -1,0 +1,994 @@
+2025-11-10 19:20:01.564 -03:00 [INF] Iniciando aplicação Magma3 Backend Assessment
+2025-11-10 19:20:01.668 -03:00 [INF] Now listening on: http://localhost:5059
+2025-11-10 19:20:01.673 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 19:20:01.673 -03:00 [INF] Hosting environment: Development
+2025-11-10 19:20:01.673 -03:00 [INF] Content root path: /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API
+2025-11-10 19:20:13.174 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ - null null
+2025-11-10 19:20:13.209 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ - 301 0 null 35.093ms
+2025-11-10 19:20:13.214 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/index.html - null null
+2025-11-10 19:20:13.260 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/index.html - 200 null text/html;charset=utf-8 45.8614ms
+2025-11-10 19:20:13.280 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/swagger-ui.css - null null
+2025-11-10 19:20:13.285 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/swagger-ui-bundle.js - null null
+2025-11-10 19:20:13.285 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/swagger-ui-standalone-preset.js - null null
+2025-11-10 19:20:13.300 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-11-10 19:20:13.300 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-11-10 19:20:13.300 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-11-10 19:20:13.303 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/swagger-ui-bundle.js - 200 1456926 text/javascript 18.5017ms
+2025-11-10 19:20:13.303 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/swagger-ui-standalone-preset.js - 200 230280 text/javascript 18.371ms
+2025-11-10 19:20:13.303 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/swagger-ui.css - 200 152034 text/css 23.1263ms
+2025-11-10 19:20:13.426 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - null null
+2025-11-10 19:20:13.443 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/favicon-32x32.png - null null
+2025-11-10 19:20:13.443 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-11-10 19:20:13.444 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/favicon-32x32.png - 200 628 image/png 0.8697ms
+2025-11-10 19:20:13.514 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.1861ms
+2025-11-10 19:20:23.336 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/health - null null
+2025-11-10 19:20:23.340 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-10 19:20:23.341 -03:00 [INF] Executing endpoint 'HTTP: GET /health'
+2025-11-10 19:20:23.353 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 19:20:23.360 -03:00 [INF] Writing value of type '<>f__AnonymousType4`3' as Json.
+2025-11-10 19:20:23.363 -03:00 [INF] Executed endpoint 'HTTP: GET /health'
+2025-11-10 19:20:23.364 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/health - 200 null application/json; charset=utf-8 27.4504ms
+2025-11-10 19:20:39.268 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes - null null
+2025-11-10 19:20:39.270 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:20:39.285 -03:00 [INF] Route matched with {action = "GetClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MagmaAssessment.Core.Models.Cliente]]] GetClientes() on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:20:39.290 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API) in 2.4424ms
+2025-11-10 19:20:39.291 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:20:39.291 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Connection string 'MongoBd' não encontrada.
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository..ctor(IConfiguration configuration, ILogger`1 logger) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 25
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method17(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-10 19:20:39.299 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes - 500 null text/plain; charset=utf-8 31.8681ms
+2025-11-10 19:24:37.024 -03:00 [INF] Application is shutting down...
+2025-11-10 19:36:43.149 -03:00 [INF] Iniciando aplicação Magma3 Backend Assessment
+2025-11-10 19:36:43.247 -03:00 [INF] Now listening on: http://localhost:5059
+2025-11-10 19:36:43.250 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 19:36:43.250 -03:00 [INF] Hosting environment: Development
+2025-11-10 19:36:43.250 -03:00 [INF] Content root path: /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API
+2025-11-10 19:36:46.771 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/index.html - null null
+2025-11-10 19:36:46.841 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/index.html - 200 null text/html;charset=utf-8 70.7109ms
+2025-11-10 19:36:46.984 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - null null
+2025-11-10 19:36:47.062 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.3286ms
+2025-11-10 19:36:49.701 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes - null null
+2025-11-10 19:36:49.707 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-10 19:36:49.709 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:36:49.722 -03:00 [INF] Route matched with {action = "GetClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MagmaAssessment.Core.Models.Cliente]]] GetClientes() on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:36:49.725 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:36:49.947 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:36:49.948 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:36:49.949 -03:00 [INF] GET /api/clientes - obtendo todos os clientes
+2025-11-10 19:36:49.950 -03:00 [INF] Obtendo todos os clientes do banco de dados
+2025-11-10 19:36:49.993 -03:00 [INF] Total de 0 clientes obtidos
+2025-11-10 19:36:49.997 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MagmaAssessment.Core.Models.Cliente, MagmaAssessment.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-10 19:36:50.013 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API) in 287.8918ms
+2025-11-10 19:36:50.013 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:36:50.014 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes - 200 null application/json; charset=utf-8 312.5115ms
+2025-11-10 19:37:38.809 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 112
+2025-11-10 19:37:38.812 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:37:38.823 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:37:38.824 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:37:38.832 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:37:38.832 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:37:38.851 -03:00 [INF] POST /api/clientes - adicionando novo cliente: string
+2025-11-10 19:37:38.852 -03:00 [INF] adicionando novo cliente: string - user@example.com
+2025-11-10 19:37:38.921 -03:00 [ERR] erro ao adicionar novo cliente: string - user@example.com
+MongoDB.Bson.BsonSerializationException: An error occurred while serializing the Id property of class MagmaAssessment.Core.Models.Cliente: 'string' is not a valid 24 digit hex string.
+ ---> System.FormatException: 'string' is not a valid 24 digit hex string.
+   at MongoDB.Bson.ObjectId.Parse(String s)
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, String value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeNormalMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeClass(BsonSerializationContext context, BsonSerializationArgs args, TClass document)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TClass value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonDocumentWrapperSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, BsonDocumentWrapper value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Driver.Core.Operations.BulkInsertOperation.InsertRequestSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, InsertRequest value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteType1Section(BsonBinaryWriter writer, Type1CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSection(BsonBinaryWriter writer, CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSections(BsonBinaryWriter writer, IEnumerable`1 sections, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteMessage(CommandMessage message)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandRequestMessageBinaryEncoder.WriteMessage(CommandRequestMessage message)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandRequestMessageBinaryEncoder.MongoDB.Driver.Core.WireProtocol.Messages.Encoders.IMessageEncoder.WriteMessage(MongoDBMessage message)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesHelper.EncodeMessages(CancellationToken cancellationToken, List`1& sentMessages)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.PooledConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingCommandMessageWireProtocol`1.ExecuteAsync(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.ServerChannel.ExecuteProtocolAsync[TResult](IWireProtocol`1 protocol, ICoreSession session, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableWriteOperationExecutor.ExecuteAsync[TResult](IRetryableWriteOperation`1 operation, RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchesAsync(RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteAsync(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperationAsync[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperationAsync[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOneAsync(TDocument document, InsertOneOptions options, Func`3 bulkWriteAsync)
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 155
+2025-11-10 19:37:38.929 -03:00 [ERR] erro ao adicionar cliente
+MongoDB.Bson.BsonSerializationException: An error occurred while serializing the Id property of class MagmaAssessment.Core.Models.Cliente: 'string' is not a valid 24 digit hex string.
+ ---> System.FormatException: 'string' is not a valid 24 digit hex string.
+   at MongoDB.Bson.ObjectId.Parse(String s)
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, String value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeNormalMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeClass(BsonSerializationContext context, BsonSerializationArgs args, TClass document)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TClass value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonDocumentWrapperSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, BsonDocumentWrapper value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Driver.Core.Operations.BulkInsertOperation.InsertRequestSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, InsertRequest value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteType1Section(BsonBinaryWriter writer, Type1CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSection(BsonBinaryWriter writer, CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSections(BsonBinaryWriter writer, IEnumerable`1 sections, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteMessage(CommandMessage message)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandRequestMessageBinaryEncoder.WriteMessage(CommandRequestMessage message)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandRequestMessageBinaryEncoder.MongoDB.Driver.Core.WireProtocol.Messages.Encoders.IMessageEncoder.WriteMessage(MongoDBMessage message)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesHelper.EncodeMessages(CancellationToken cancellationToken, List`1& sentMessages)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.PooledConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingCommandMessageWireProtocol`1.ExecuteAsync(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.ServerChannel.ExecuteProtocolAsync[TResult](IWireProtocol`1 protocol, ICoreSession session, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableWriteOperationExecutor.ExecuteAsync[TResult](IRetryableWriteOperation`1 operation, RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchesAsync(RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteAsync(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperationAsync[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperationAsync[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOneAsync(TDocument document, InsertOneOptions options, Func`3 bulkWriteAsync)
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 155
+   at MagmaAssessment.API.Controllers.ClientesController.PostCliente(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/Controllers/ClientesController.cs:line 118
+2025-11-10 19:37:38.933 -03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:37:38.935 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 111.3392ms
+2025-11-10 19:37:38.935 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:37:38.936 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 500 null application/json; charset=utf-8 127.0494ms
+2025-11-10 19:39:00.805 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 126
+2025-11-10 19:39:00.806 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:39:00.806 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:39:00.807 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:39:00.809 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:39:00.809 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:39:00.811 -03:00 [INF] POST /api/clientes - adicionando novo cliente: Magma3 Tecnologia
+2025-11-10 19:39:00.811 -03:00 [INF] adicionando novo cliente: Magma3 Tecnologia - email@magma3.com.br
+2025-11-10 19:39:00.815 -03:00 [ERR] erro ao adicionar novo cliente: Magma3 Tecnologia - email@magma3.com.br
+MongoDB.Bson.BsonSerializationException: An error occurred while serializing the Id property of class MagmaAssessment.Core.Models.Cliente: '1' is not a valid 24 digit hex string.
+ ---> System.FormatException: '1' is not a valid 24 digit hex string.
+   at MongoDB.Bson.ObjectId.Parse(String s)
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, String value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeNormalMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeClass(BsonSerializationContext context, BsonSerializationArgs args, TClass document)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TClass value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonDocumentWrapperSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, BsonDocumentWrapper value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Driver.Core.Operations.BulkInsertOperation.InsertRequestSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, InsertRequest value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteType1Section(BsonBinaryWriter writer, Type1CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSection(BsonBinaryWriter writer, CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSections(BsonBinaryWriter writer, IEnumerable`1 sections, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteMessage(CommandMessage message)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandRequestMessageBinaryEncoder.WriteMessage(CommandRequestMessage message)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandRequestMessageBinaryEncoder.MongoDB.Driver.Core.WireProtocol.Messages.Encoders.IMessageEncoder.WriteMessage(MongoDBMessage message)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesHelper.EncodeMessages(CancellationToken cancellationToken, List`1& sentMessages)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.PooledConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingCommandMessageWireProtocol`1.ExecuteAsync(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.ServerChannel.ExecuteProtocolAsync[TResult](IWireProtocol`1 protocol, ICoreSession session, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableWriteOperationExecutor.ExecuteAsync[TResult](IRetryableWriteOperation`1 operation, RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchesAsync(RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteAsync(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperationAsync[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperationAsync[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOneAsync(TDocument document, InsertOneOptions options, Func`3 bulkWriteAsync)
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 155
+2025-11-10 19:39:00.817 -03:00 [ERR] erro ao adicionar cliente
+MongoDB.Bson.BsonSerializationException: An error occurred while serializing the Id property of class MagmaAssessment.Core.Models.Cliente: '1' is not a valid 24 digit hex string.
+ ---> System.FormatException: '1' is not a valid 24 digit hex string.
+   at MongoDB.Bson.ObjectId.Parse(String s)
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, String value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeNormalMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeMember(BsonSerializationContext context, Object obj, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeClass(BsonSerializationContext context, BsonSerializationArgs args, TClass document)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TClass value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonDocumentWrapperSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, BsonDocumentWrapper value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Driver.Core.Operations.BulkInsertOperation.InsertRequestSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, InsertRequest value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteType1Section(BsonBinaryWriter writer, Type1CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSection(BsonBinaryWriter writer, CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSections(BsonBinaryWriter writer, IEnumerable`1 sections, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteMessage(CommandMessage message)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandRequestMessageBinaryEncoder.WriteMessage(CommandRequestMessage message)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandRequestMessageBinaryEncoder.MongoDB.Driver.Core.WireProtocol.Messages.Encoders.IMessageEncoder.WriteMessage(MongoDBMessage message)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesHelper.EncodeMessages(CancellationToken cancellationToken, List`1& sentMessages)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.ConnectionPools.ExclusiveConnectionPool.PooledConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingCommandMessageWireProtocol`1.ExecuteAsync(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.ServerChannel.ExecuteProtocolAsync[TResult](IWireProtocol`1 protocol, ICoreSession session, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableWriteOperationExecutor.ExecuteAsync[TResult](IRetryableWriteOperation`1 operation, RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchesAsync(RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteAsync(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperationAsync[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperationAsync[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOneAsync(TDocument document, InsertOneOptions options, Func`3 bulkWriteAsync)
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 155
+   at MagmaAssessment.API.Controllers.ClientesController.PostCliente(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/Controllers/ClientesController.cs:line 118
+2025-11-10 19:39:00.819 -03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:39:00.819 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 12.8392ms
+2025-11-10 19:39:00.819 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:39:00.820 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 500 null application/json; charset=utf-8 14.7544ms
+2025-11-10 19:39:52.725 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 113
+2025-11-10 19:39:52.725 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:39:52.726 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:39:52.726 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:39:52.728 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:39:52.730 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:39:52.731 -03:00 [INF] POST /api/clientes - adicionando novo cliente: Magma3 Tecnologia
+2025-11-10 19:39:52.731 -03:00 [INF] adicionando novo cliente: Magma3 Tecnologia - email@magma3.com.br
+2025-11-10 19:39:52.752 -03:00 [INF] cliente adicionado com sucesso: id=691269b88f419cb1a4cf65cf
+2025-11-10 19:39:52.753 -03:00 [INF] cliente criado com sucesso: ID=691269b88f419cb1a4cf65cf, Nome=Magma3 Tecnologia
+2025-11-10 19:39:52.753 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MagmaAssessment.Core.Models.Cliente'.
+2025-11-10 19:39:52.763 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 36.4511ms
+2025-11-10 19:39:52.763 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:39:52.763 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 201 null application/json; charset=utf-8 37.9581ms
+2025-11-10 19:42:28.128 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 113
+2025-11-10 19:42:28.128 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:42:28.129 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:42:28.129 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:42:28.131 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:42:28.131 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:42:28.132 -03:00 [INF] POST /api/clientes - adicionando novo cliente: Magma3 Tecnologia
+2025-11-10 19:42:28.132 -03:00 [INF] adicionando novo cliente: Magma3 Tecnologia - email@magma3.com.br
+2025-11-10 19:42:28.135 -03:00 [WRN] cliente com email email@magma3.com.br já existe
+2025-11-10 19:42:28.135 -03:00 [ERR] erro ao adicionar novo cliente: Magma3 Tecnologia - email@magma3.com.br
+System.InvalidOperationException: cliente com email email@magma3.com.br já existe
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 153
+2025-11-10 19:42:28.136 -03:00 [WRN] erro ao adicionar cliente: email duplicado
+System.InvalidOperationException: cliente com email email@magma3.com.br já existe
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 153
+   at MagmaAssessment.API.Controllers.ClientesController.PostCliente(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/Controllers/ClientesController.cs:line 118
+2025-11-10 19:42:28.137 -03:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:42:28.137 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 8.2464ms
+2025-11-10 19:42:28.137 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:42:28.137 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 400 null application/json; charset=utf-8 9.8468ms
+2025-11-10 19:43:08.658 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 109
+2025-11-10 19:43:08.658 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:43:08.658 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:43:08.658 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:43:08.661 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:43:08.661 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:43:08.662 -03:00 [INF] POST /api/clientes - adicionando novo cliente: LINK Tecnologia
+2025-11-10 19:43:08.662 -03:00 [INF] adicionando novo cliente: LINK Tecnologia - link@gmail.com.br
+2025-11-10 19:43:08.666 -03:00 [INF] cliente adicionado com sucesso: id=69126a7c8f419cb1a4cf65d1
+2025-11-10 19:43:08.667 -03:00 [INF] cliente criado com sucesso: ID=69126a7c8f419cb1a4cf65d1, Nome=LINK Tecnologia
+2025-11-10 19:43:08.667 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MagmaAssessment.Core.Models.Cliente'.
+2025-11-10 19:43:08.668 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 9.5397ms
+2025-11-10 19:43:08.668 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:43:08.668 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 201 null application/json; charset=utf-8 10.8559ms
+2025-11-10 19:43:11.665 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 109
+2025-11-10 19:43:11.665 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:43:11.666 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:43:11.666 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:43:11.668 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:43:11.668 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:43:11.669 -03:00 [INF] POST /api/clientes - adicionando novo cliente: LINK Tecnologia
+2025-11-10 19:43:11.669 -03:00 [INF] adicionando novo cliente: LINK Tecnologia - link@gmail.com.br
+2025-11-10 19:43:11.671 -03:00 [WRN] cliente com email link@gmail.com.br já existe
+2025-11-10 19:43:11.672 -03:00 [ERR] erro ao adicionar novo cliente: LINK Tecnologia - link@gmail.com.br
+System.InvalidOperationException: cliente com email link@gmail.com.br já existe
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 153
+2025-11-10 19:43:11.672 -03:00 [WRN] erro ao adicionar cliente: email duplicado
+System.InvalidOperationException: cliente com email link@gmail.com.br já existe
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 153
+   at MagmaAssessment.API.Controllers.ClientesController.PostCliente(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/Controllers/ClientesController.cs:line 118
+2025-11-10 19:43:11.673 -03:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:43:11.673 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 7.7213ms
+2025-11-10 19:43:11.674 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:43:11.674 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 400 null application/json; charset=utf-8 8.8802ms
+2025-11-10 19:44:03.494 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 119
+2025-11-10 19:44:03.495 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:44:03.495 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:44:03.495 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:44:03.497 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:44:03.497 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:44:03.498 -03:00 [INF] POST /api/clientes - adicionando novo cliente: Patrus Transportes
+2025-11-10 19:44:03.498 -03:00 [INF] adicionando novo cliente: Patrus Transportes - patrus@transportes.com.br
+2025-11-10 19:44:03.502 -03:00 [INF] cliente adicionado com sucesso: id=69126ab38f419cb1a4cf65d3
+2025-11-10 19:44:03.502 -03:00 [INF] cliente criado com sucesso: ID=69126ab38f419cb1a4cf65d3, Nome=Patrus Transportes
+2025-11-10 19:44:03.503 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MagmaAssessment.Core.Models.Cliente'.
+2025-11-10 19:44:03.503 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 8.0425ms
+2025-11-10 19:44:03.504 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:44:03.504 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 201 null application/json; charset=utf-8 9.3227ms
+2025-11-10 19:44:07.910 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 119
+2025-11-10 19:44:07.911 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:44:07.911 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:44:07.911 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:44:07.913 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:44:07.913 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:44:07.914 -03:00 [INF] POST /api/clientes - adicionando novo cliente: Patrus Transportes
+2025-11-10 19:44:07.914 -03:00 [INF] adicionando novo cliente: Patrus Transportes - patrus@transportes.com.br
+2025-11-10 19:44:07.916 -03:00 [WRN] cliente com email patrus@transportes.com.br já existe
+2025-11-10 19:44:07.916 -03:00 [ERR] erro ao adicionar novo cliente: Patrus Transportes - patrus@transportes.com.br
+System.InvalidOperationException: cliente com email patrus@transportes.com.br já existe
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 153
+2025-11-10 19:44:07.917 -03:00 [WRN] erro ao adicionar cliente: email duplicado
+System.InvalidOperationException: cliente com email patrus@transportes.com.br já existe
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Adicionar(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 153
+   at MagmaAssessment.API.Controllers.ClientesController.PostCliente(Cliente cliente) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/Controllers/ClientesController.cs:line 118
+2025-11-10 19:44:07.917 -03:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:44:07.918 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 6.6061ms
+2025-11-10 19:44:07.918 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:44:07.918 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 400 null application/json; charset=utf-8 7.8446ms
+2025-11-10 19:44:43.734 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 112
+2025-11-10 19:44:43.734 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:44:43.734 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:44:43.734 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:44:43.736 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:44:43.737 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:44:43.737 -03:00 [INF] POST /api/clientes - adicionando novo cliente: Bruno Henrique dos Santos Silva
+2025-11-10 19:44:43.737 -03:00 [INF] adicionando novo cliente: Bruno Henrique dos Santos Silva - bruno@email.com
+2025-11-10 19:44:43.741 -03:00 [INF] cliente adicionado com sucesso: id=69126adb8f419cb1a4cf65d5
+2025-11-10 19:44:43.741 -03:00 [INF] cliente criado com sucesso: ID=69126adb8f419cb1a4cf65d5, Nome=Bruno Henrique dos Santos Silva
+2025-11-10 19:44:43.741 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MagmaAssessment.Core.Models.Cliente'.
+2025-11-10 19:44:43.742 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 7.2237ms
+2025-11-10 19:44:43.742 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:44:43.742 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 201 null application/json; charset=utf-8 8.5241ms
+2025-11-10 19:45:39.612 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 103
+2025-11-10 19:45:39.613 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:45:39.613 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:45:39.613 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:45:39.615 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:45:39.615 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:45:39.617 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-10 19:45:39.630 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 16.6862ms
+2025-11-10 19:45:39.630 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:45:39.630 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 400 null application/json; charset=utf-8 17.9325ms
+2025-11-10 19:46:06.094 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5059/api/Clientes - application/json 120
+2025-11-10 19:46:06.095 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:46:06.095 -03:00 [INF] Route matched with {action = "PostCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PostCliente(MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:46:06.095 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:46:06.097 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:46:06.097 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:46:06.097 -03:00 [INF] POST /api/clientes - adicionando novo cliente: João Lucas Ribeiro Menezes
+2025-11-10 19:46:06.097 -03:00 [INF] adicionando novo cliente: João Lucas Ribeiro Menezes - joao@lucas.com.br
+2025-11-10 19:46:06.102 -03:00 [INF] cliente adicionado com sucesso: id=69126b2e8f419cb1a4cf65d7
+2025-11-10 19:46:06.103 -03:00 [INF] cliente criado com sucesso: ID=69126b2e8f419cb1a4cf65d7, Nome=João Lucas Ribeiro Menezes
+2025-11-10 19:46:06.104 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MagmaAssessment.Core.Models.Cliente'.
+2025-11-10 19:46:06.105 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API) in 9.3324ms
+2025-11-10 19:46:06.105 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PostCliente (MagmaAssessment.API)'
+2025-11-10 19:46:06.105 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5059/api/Clientes - 201 null application/json; charset=utf-8 10.604ms
+2025-11-10 19:46:11.296 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes - null null
+2025-11-10 19:46:11.296 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:46:11.297 -03:00 [INF] Route matched with {action = "GetClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MagmaAssessment.Core.Models.Cliente]]] GetClientes() on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:46:11.297 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:46:11.298 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:46:11.299 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:46:11.299 -03:00 [INF] GET /api/clientes - obtendo todos os clientes
+2025-11-10 19:46:11.299 -03:00 [INF] Obtendo todos os clientes do banco de dados
+2025-11-10 19:46:11.313 -03:00 [INF] Total de 5 clientes obtidos
+2025-11-10 19:46:11.313 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MagmaAssessment.Core.Models.Cliente, MagmaAssessment.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-10 19:46:11.314 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API) in 16.8988ms
+2025-11-10 19:46:11.314 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:46:11.314 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes - 200 null application/json; charset=utf-8 18.0984ms
+2025-11-10 19:46:40.472 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes/69126a7c8f419cb1a4cf65d1 - null null
+2025-11-10 19:46:40.473 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetCliente (MagmaAssessment.API)'
+2025-11-10 19:46:40.477 -03:00 [INF] Route matched with {action = "GetCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] GetCliente(System.String) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:46:40.478 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:46:40.479 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:46:40.479 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:46:40.481 -03:00 [INF] GET /api/clientes/69126a7c8f419cb1a4cf65d1 - obtendo cliente por id
+2025-11-10 19:46:40.482 -03:00 [INF] obtendo cliente por id: 69126a7c8f419cb1a4cf65d1
+2025-11-10 19:46:40.491 -03:00 [INF] Executing OkObjectResult, writing value of type 'MagmaAssessment.Core.Models.Cliente'.
+2025-11-10 19:46:40.491 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetCliente (MagmaAssessment.API) in 13.4394ms
+2025-11-10 19:46:40.491 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetCliente (MagmaAssessment.API)'
+2025-11-10 19:46:40.491 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes/69126a7c8f419cb1a4cf65d1 - 200 null application/json; charset=utf-8 18.7849ms
+2025-11-10 19:46:57.053 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes/69126ab38f419cb1a4cf65d3 - null null
+2025-11-10 19:46:57.054 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetCliente (MagmaAssessment.API)'
+2025-11-10 19:46:57.054 -03:00 [INF] Route matched with {action = "GetCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] GetCliente(System.String) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:46:57.054 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:46:57.055 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:46:57.055 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:46:57.056 -03:00 [INF] GET /api/clientes/69126ab38f419cb1a4cf65d3 - obtendo cliente por id
+2025-11-10 19:46:57.056 -03:00 [INF] obtendo cliente por id: 69126ab38f419cb1a4cf65d3
+2025-11-10 19:46:57.058 -03:00 [INF] Executing OkObjectResult, writing value of type 'MagmaAssessment.Core.Models.Cliente'.
+2025-11-10 19:46:57.058 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetCliente (MagmaAssessment.API) in 4.0339ms
+2025-11-10 19:46:57.058 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetCliente (MagmaAssessment.API)'
+2025-11-10 19:46:57.058 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes/69126ab38f419cb1a4cf65d3 - 200 null application/json; charset=utf-8 5.8128ms
+2025-11-10 19:47:23.105 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes/email/email@magma3.com.br - null null
+2025-11-10 19:47:23.106 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientePorEmail (MagmaAssessment.API)'
+2025-11-10 19:47:23.110 -03:00 [INF] Route matched with {action = "GetClientePorEmail", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] GetClientePorEmail(System.String) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:47:23.110 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:47:23.111 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:47:23.112 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:47:23.113 -03:00 [INF] GET /api/clientes/email/email@magma3.com.br - obtendo cliente por email
+2025-11-10 19:47:23.114 -03:00 [INF] obtendo cliente por email: email@magma3.com.br
+2025-11-10 19:47:23.117 -03:00 [INF] Executing ObjectResult, writing value of type 'MagmaAssessment.Core.Models.Cliente'.
+2025-11-10 19:47:23.117 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetClientePorEmail (MagmaAssessment.API) in 7.2962ms
+2025-11-10 19:47:23.118 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientePorEmail (MagmaAssessment.API)'
+2025-11-10 19:47:23.118 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes/email/email@magma3.com.br - 200 null application/json; charset=utf-8 12.4216ms
+2025-11-10 19:47:51.041 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes/email/joao@lucas.com.br - null null
+2025-11-10 19:47:51.042 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientePorEmail (MagmaAssessment.API)'
+2025-11-10 19:47:51.042 -03:00 [INF] Route matched with {action = "GetClientePorEmail", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] GetClientePorEmail(System.String) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:47:51.042 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:47:51.044 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:47:51.044 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:47:51.044 -03:00 [INF] GET /api/clientes/email/joao@lucas.com.br - obtendo cliente por email
+2025-11-10 19:47:51.045 -03:00 [INF] obtendo cliente por email: joao@lucas.com.br
+2025-11-10 19:47:51.049 -03:00 [INF] Executing ObjectResult, writing value of type 'MagmaAssessment.Core.Models.Cliente'.
+2025-11-10 19:47:51.049 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetClientePorEmail (MagmaAssessment.API) in 6.8204ms
+2025-11-10 19:47:51.049 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientePorEmail (MagmaAssessment.API)'
+2025-11-10 19:47:51.050 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes/email/joao@lucas.com.br - 200 null application/json; charset=utf-8 8.461ms
+2025-11-10 19:48:06.752 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes/verificar-email/joao@lucas.com.br - null null
+2025-11-10 19:48:06.752 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.VerificarEmail (MagmaAssessment.API)'
+2025-11-10 19:48:06.758 -03:00 [INF] Route matched with {action = "VerificarEmail", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerificarEmail(System.String) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:48:06.760 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:48:06.762 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:48:06.762 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:48:06.765 -03:00 [INF] GET /api/clientes/verificar-email/joao@lucas.com.br - verificando existencia do email
+2025-11-10 19:48:06.770 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:48:06.774 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.VerificarEmail (MagmaAssessment.API) in 13.7975ms
+2025-11-10 19:48:06.774 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.VerificarEmail (MagmaAssessment.API)'
+2025-11-10 19:48:06.774 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes/verificar-email/joao@lucas.com.br - 200 null application/json; charset=utf-8 22.5283ms
+2025-11-10 19:48:17.657 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes/verificar-email/bruno@lucas.com.br - null null
+2025-11-10 19:48:17.658 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.VerificarEmail (MagmaAssessment.API)'
+2025-11-10 19:48:17.659 -03:00 [INF] Route matched with {action = "VerificarEmail", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerificarEmail(System.String) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:48:17.659 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:48:17.661 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:48:17.661 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:48:17.661 -03:00 [INF] GET /api/clientes/verificar-email/bruno@lucas.com.br - verificando existencia do email
+2025-11-10 19:48:17.665 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:48:17.665 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.VerificarEmail (MagmaAssessment.API) in 6.4707ms
+2025-11-10 19:48:17.666 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.VerificarEmail (MagmaAssessment.API)'
+2025-11-10 19:48:17.666 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes/verificar-email/bruno@lucas.com.br - 200 null application/json; charset=utf-8 8.6451ms
+2025-11-10 19:48:36.680 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5059/api/Clientes/69126ab38f419cb1a4cf65d3 - null null
+2025-11-10 19:48:36.680 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.DeleteCliente (MagmaAssessment.API)'
+2025-11-10 19:48:36.684 -03:00 [INF] Route matched with {action = "DeleteCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCliente(System.String) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:48:36.684 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:48:36.686 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:48:36.686 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:48:36.688 -03:00 [INF] DELETE /api/clientes/69126ab38f419cb1a4cf65d3 - removendo cliente
+2025-11-10 19:48:36.689 -03:00 [INF] removendo cliente id=69126ab38f419cb1a4cf65d3
+2025-11-10 19:48:36.699 -03:00 [INF] cliente 69126ab38f419cb1a4cf65d3 removido com sucesso
+2025-11-10 19:48:36.699 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:48:36.699 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.DeleteCliente (MagmaAssessment.API) in 15.3297ms
+2025-11-10 19:48:36.700 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.DeleteCliente (MagmaAssessment.API)'
+2025-11-10 19:48:36.700 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5059/api/Clientes/69126ab38f419cb1a4cf65d3 - 200 null application/json; charset=utf-8 20.0592ms
+2025-11-10 19:48:44.139 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes - null null
+2025-11-10 19:48:44.140 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:48:44.140 -03:00 [INF] Route matched with {action = "GetClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MagmaAssessment.Core.Models.Cliente]]] GetClientes() on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:48:44.140 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:48:44.142 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:48:44.142 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:48:44.142 -03:00 [INF] GET /api/clientes - obtendo todos os clientes
+2025-11-10 19:48:44.142 -03:00 [INF] Obtendo todos os clientes do banco de dados
+2025-11-10 19:48:44.144 -03:00 [INF] Total de 4 clientes obtidos
+2025-11-10 19:48:44.144 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MagmaAssessment.Core.Models.Cliente, MagmaAssessment.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-10 19:48:44.145 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API) in 4.1691ms
+2025-11-10 19:48:44.145 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:48:44.145 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes - 200 null application/json; charset=utf-8 5.525ms
+2025-11-10 19:48:54.797 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes/69126ab38f419cb1a4cf65d3 - null null
+2025-11-10 19:48:54.797 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetCliente (MagmaAssessment.API)'
+2025-11-10 19:48:54.798 -03:00 [INF] Route matched with {action = "GetCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] GetCliente(System.String) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:48:54.798 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:48:54.799 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:48:54.799 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:48:54.800 -03:00 [INF] GET /api/clientes/69126ab38f419cb1a4cf65d3 - obtendo cliente por id
+2025-11-10 19:48:54.800 -03:00 [INF] obtendo cliente por id: 69126ab38f419cb1a4cf65d3
+2025-11-10 19:48:54.802 -03:00 [WRN] cliente com id: 69126ab38f419cb1a4cf65d3 não encontrado
+2025-11-10 19:48:54.803 -03:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:48:54.803 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetCliente (MagmaAssessment.API) in 5.494ms
+2025-11-10 19:48:54.803 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetCliente (MagmaAssessment.API)'
+2025-11-10 19:48:54.804 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes/69126ab38f419cb1a4cf65d3 - 404 null application/json; charset=utf-8 6.8068ms
+2025-11-10 19:49:23.561 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes - null null
+2025-11-10 19:49:23.561 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:49:23.562 -03:00 [INF] Route matched with {action = "GetClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MagmaAssessment.Core.Models.Cliente]]] GetClientes() on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:49:23.562 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:49:23.563 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:49:23.564 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:49:23.564 -03:00 [INF] GET /api/clientes - obtendo todos os clientes
+2025-11-10 19:49:23.564 -03:00 [INF] Obtendo todos os clientes do banco de dados
+2025-11-10 19:49:23.566 -03:00 [INF] Total de 4 clientes obtidos
+2025-11-10 19:49:23.567 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MagmaAssessment.Core.Models.Cliente, MagmaAssessment.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-10 19:49:23.567 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API) in 5.3788ms
+2025-11-10 19:49:23.568 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:49:23.569 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes - 200 null application/json; charset=utf-8 7.6511ms
+2025-11-10 19:50:04.564 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5059/api/Clientes/69126adb8f419cb1a4cf65d5 - application/json 82
+2025-11-10 19:50:04.564 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PutCliente (MagmaAssessment.API)'
+2025-11-10 19:50:04.570 -03:00 [INF] Route matched with {action = "PutCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PutCliente(System.String, MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:50:04.570 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:50:04.572 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:50:04.572 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:50:04.573 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-10 19:50:04.573 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PutCliente (MagmaAssessment.API) in 2.8326ms
+2025-11-10 19:50:04.573 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PutCliente (MagmaAssessment.API)'
+2025-11-10 19:50:04.573 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5059/api/Clientes/69126adb8f419cb1a4cf65d5 - 400 null application/json; charset=utf-8 9.5033ms
+2025-11-10 19:50:26.787 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5059/api/Clientes/69126adb8f419cb1a4cf65d5 - application/json 113
+2025-11-10 19:50:26.787 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PutCliente (MagmaAssessment.API)'
+2025-11-10 19:50:26.787 -03:00 [INF] Route matched with {action = "PutCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PutCliente(System.String, MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:50:26.787 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:50:26.789 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:50:26.789 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:50:26.791 -03:00 [INF] PUT /api/clientes/69126adb8f419cb1a4cf65d5 - atualizando cliente
+2025-11-10 19:50:26.793 -03:00 [INF] atualizando cliente id=69126adb8f419cb1a4cf65d5
+2025-11-10 19:50:26.793 -03:00 [INF] obtendo cliente por id: 69126adb8f419cb1a4cf65d5
+2025-11-10 19:50:26.813 -03:00 [ERR] erro ao atualizar cliente id=69126adb8f419cb1a4cf65d5
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error. WriteError: { Category : "Uncategorized", Code : 66, Message : "After applying the update, the (immutable) field '_id' was found to have been altered to _id: ObjectId('69126c328f419cb1a4cf65ea')" }.
+ ---> MongoDB.Driver.MongoBulkWriteException`1[MagmaAssessment.Core.Models.Cliente]: A bulk write operation resulted in one or more errors. WriteErrors: [ { Category : "Uncategorized", Code : 66, Message : "After applying the update, the (immutable) field '_id' was found to have been altered to _id: ObjectId('69126c328f419cb1a4cf65ea')" } ].
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, ReplaceOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, ReplaceOptions options, Func`3 bulkWriteAsync)
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Atualizar(String id, Cliente clienteAtualizado) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 188
+2025-11-10 19:50:26.814 -03:00 [ERR] erro ao atualizar cliente: 69126adb8f419cb1a4cf65d5
+MongoDB.Driver.MongoWriteException: A write operation resulted in an error. WriteError: { Category : "Uncategorized", Code : 66, Message : "After applying the update, the (immutable) field '_id' was found to have been altered to _id: ObjectId('69126c328f419cb1a4cf65ea')" }.
+ ---> MongoDB.Driver.MongoBulkWriteException`1[MagmaAssessment.Core.Models.Cliente]: A bulk write operation resulted in one or more errors. WriteErrors: [ { Category : "Uncategorized", Code : 66, Message : "After applying the update, the (immutable) field '_id' was found to have been altered to _id: ObjectId('69126c328f419cb1a4cf65ea')" } ].
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, ReplaceOptions options, Func`3 bulkWriteAsync)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOneAsync(FilterDefinition`1 filter, TDocument replacement, ReplaceOptions options, Func`3 bulkWriteAsync)
+   at MagmaAssessment.Infrastructure.Repositories.ClienteRepository.Atualizar(String id, Cliente clienteAtualizado) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Repositories/ClienteRepository.cs:line 188
+   at MagmaAssessment.API.Controllers.ClientesController.PutCliente(String id, Cliente clienteAtualizado) in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/Controllers/ClientesController.cs:line 165
+2025-11-10 19:50:26.815 -03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:50:26.815 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PutCliente (MagmaAssessment.API) in 27.309ms
+2025-11-10 19:50:26.815 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PutCliente (MagmaAssessment.API)'
+2025-11-10 19:50:26.815 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5059/api/Clientes/69126adb8f419cb1a4cf65d5 - 500 null application/json; charset=utf-8 28.4379ms
+2025-11-10 19:52:05.748 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5059/api/Clientes/69126adb8f419cb1a4cf65d5 - application/json 149
+2025-11-10 19:52:05.748 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.PutCliente (MagmaAssessment.API)'
+2025-11-10 19:52:05.749 -03:00 [INF] Route matched with {action = "PutCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MagmaAssessment.Core.Models.Cliente]] PutCliente(System.String, MagmaAssessment.Core.Models.Cliente) on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:52:05.749 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:52:05.750 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:52:05.750 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:52:05.751 -03:00 [INF] PUT /api/clientes/69126adb8f419cb1a4cf65d5 - atualizando cliente
+2025-11-10 19:52:05.751 -03:00 [INF] atualizando cliente id=69126adb8f419cb1a4cf65d5
+2025-11-10 19:52:05.751 -03:00 [INF] obtendo cliente por id: 69126adb8f419cb1a4cf65d5
+2025-11-10 19:52:05.758 -03:00 [INF] cliente atualizado com sucesso id=69126adb8f419cb1a4cf65d5
+2025-11-10 19:52:05.758 -03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-10 19:52:05.759 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.PutCliente (MagmaAssessment.API) in 10.0903ms
+2025-11-10 19:52:05.759 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.PutCliente (MagmaAssessment.API)'
+2025-11-10 19:52:05.759 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5059/api/Clientes/69126adb8f419cb1a4cf65d5 - 200 null application/json; charset=utf-8 11.4226ms
+2025-11-10 19:52:15.713 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes - null null
+2025-11-10 19:52:15.713 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:52:15.713 -03:00 [INF] Route matched with {action = "GetClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MagmaAssessment.Core.Models.Cliente]]] GetClientes() on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 19:52:15.714 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 19:52:15.715 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 19:52:15.715 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 19:52:15.715 -03:00 [INF] GET /api/clientes - obtendo todos os clientes
+2025-11-10 19:52:15.715 -03:00 [INF] Obtendo todos os clientes do banco de dados
+2025-11-10 19:52:15.716 -03:00 [INF] Total de 4 clientes obtidos
+2025-11-10 19:52:15.717 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MagmaAssessment.Core.Models.Cliente, MagmaAssessment.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-10 19:52:15.717 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API) in 3.2696ms
+2025-11-10 19:52:15.717 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 19:52:15.717 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes - 200 null application/json; charset=utf-8 4.2792ms
+2025-11-10 19:52:47.886 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/health - null null
+2025-11-10 19:52:47.886 -03:00 [INF] Executing endpoint 'HTTP: GET /health'
+2025-11-10 19:52:47.891 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 19:52:47.894 -03:00 [INF] Writing value of type '<>f__AnonymousType4`3' as Json.
+2025-11-10 19:52:47.898 -03:00 [INF] Executed endpoint 'HTTP: GET /health'
+2025-11-10 19:52:47.898 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/health - 200 null application/json; charset=utf-8 12.0437ms
+2025-11-10 19:53:02.446 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativos - null null
+2025-11-10 19:53:02.446 -03:00 [INF] Executing endpoint 'HTTP: GET /ativos'
+2025-11-10 19:53:02.454 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 19:53:02.460 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 19:53:02.468 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:53:02.469 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:53:03.456 -03:00 [INF] Received HTTP response headers after 984.4379ms - 404
+2025-11-10 19:53:03.456 -03:00 [INF] End processing HTTP request after 989.1654ms - 404
+2025-11-10 19:53:03.460 -03:00 [WRN] Retry 1 após 2s. Motivo: NotFound
+2025-11-10 19:53:05.461 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:53:05.462 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:53:05.699 -03:00 [INF] Received HTTP response headers after 237.6807ms - 404
+2025-11-10 19:53:05.700 -03:00 [INF] End processing HTTP request after 238.6903ms - 404
+2025-11-10 19:53:05.701 -03:00 [WRN] Retry 2 após 4s. Motivo: NotFound
+2025-11-10 19:53:09.702 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:53:09.702 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:53:09.897 -03:00 [INF] Received HTTP response headers after 195.1926ms - 404
+2025-11-10 19:53:09.898 -03:00 [INF] End processing HTTP request after 196.2644ms - 404
+2025-11-10 19:53:09.901 -03:00 [ERR] circuit breaker ativado por 60s
+2025-11-10 19:53:09.902 -03:00 [WRN] Retry 3 após 8s. Motivo: NotFound
+2025-11-10 19:53:17.906 -03:00 [ERR] Circuit breaker esta aberto. Servico temporariamente indisponivel
+Polly.CircuitBreaker.BrokenCircuitException`1[System.Net.Http.HttpResponseMessage]: The circuit is now open and is not allowing calls.
+   at Polly.CircuitBreaker.CircuitStateController`1.OnActionPreExecute()
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at MagmaAssessment.Infrastructure.Services.Force1Service.ObterTodosAtivos() in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Services/Force1Service.cs:line 90
+2025-11-10 19:53:17.909 -03:00 [INF] Executed endpoint 'HTTP: GET /ativos'
+2025-11-10 19:53:17.910 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Servico Force1 temporariamente indisponivel
+ ---> Polly.CircuitBreaker.BrokenCircuitException`1[System.Net.Http.HttpResponseMessage]: The circuit is now open and is not allowing calls.
+   at Polly.CircuitBreaker.CircuitStateController`1.OnActionPreExecute()
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at MagmaAssessment.Infrastructure.Services.Force1Service.ObterTodosAtivos() in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Services/Force1Service.cs:line 90
+   --- End of inner exception stack trace ---
+   at MagmaAssessment.Infrastructure.Services.Force1Service.ObterTodosAtivos() in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Services/Force1Service.cs:line 140
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/Program.cs:line 77
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-10 19:53:17.915 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativos - 500 null text/plain; charset=utf-8 15468.7393ms
+2025-11-10 19:54:52.891 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativos - null null
+2025-11-10 19:54:52.891 -03:00 [INF] Executing endpoint 'HTTP: GET /ativos'
+2025-11-10 19:54:52.892 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 19:54:52.893 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 19:54:52.893 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:54:52.893 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:54:53.519 -03:00 [INF] Received HTTP response headers after 626.0285ms - 404
+2025-11-10 19:54:53.520 -03:00 [INF] End processing HTTP request after 626.8307ms - 404
+2025-11-10 19:54:53.520 -03:00 [WRN] Retry 1 após 2s. Motivo: NotFound
+2025-11-10 19:54:55.521 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:54:55.521 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:54:55.772 -03:00 [INF] Received HTTP response headers after 251.0849ms - 404
+2025-11-10 19:54:55.773 -03:00 [INF] End processing HTTP request after 252.1493ms - 404
+2025-11-10 19:54:55.773 -03:00 [WRN] Retry 2 após 4s. Motivo: NotFound
+2025-11-10 19:54:59.775 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:54:59.775 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 19:54:59.970 -03:00 [INF] Received HTTP response headers after 194.8518ms - 404
+2025-11-10 19:54:59.971 -03:00 [INF] End processing HTTP request after 196.1808ms - 404
+2025-11-10 19:54:59.971 -03:00 [ERR] circuit breaker ativado por 60s
+2025-11-10 19:54:59.972 -03:00 [WRN] Retry 3 após 8s. Motivo: NotFound
+2025-11-10 19:55:07.974 -03:00 [ERR] Circuit breaker esta aberto. Servico temporariamente indisponivel
+Polly.CircuitBreaker.BrokenCircuitException`1[System.Net.Http.HttpResponseMessage]: The circuit is now open and is not allowing calls.
+   at Polly.CircuitBreaker.CircuitStateController`1.OnActionPreExecute()
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at MagmaAssessment.Infrastructure.Services.Force1Service.ObterTodosAtivos() in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Services/Force1Service.cs:line 90
+2025-11-10 19:55:07.977 -03:00 [INF] Executed endpoint 'HTTP: GET /ativos'
+2025-11-10 19:55:07.977 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Servico Force1 temporariamente indisponivel
+ ---> Polly.CircuitBreaker.BrokenCircuitException`1[System.Net.Http.HttpResponseMessage]: The circuit is now open and is not allowing calls.
+   at Polly.CircuitBreaker.CircuitStateController`1.OnActionPreExecute()
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at MagmaAssessment.Infrastructure.Services.Force1Service.ObterTodosAtivos() in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Services/Force1Service.cs:line 90
+   --- End of inner exception stack trace ---
+   at MagmaAssessment.Infrastructure.Services.Force1Service.ObterTodosAtivos() in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/Services/Force1Service.cs:line 140
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/Program.cs:line 77
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-10 19:55:07.981 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativos - 500 null text/plain; charset=utf-8 15090.0088ms
+2025-11-10 20:11:53.075 -03:00 [INF] Application is shutting down...
+2025-11-10 20:12:48.678 -03:00 [INF] Iniciando aplicação Magma3 Backend Assessment
+2025-11-10 20:12:48.801 -03:00 [INF] Now listening on: http://localhost:5059
+2025-11-10 20:12:48.805 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 20:12:48.805 -03:00 [INF] Hosting environment: Development
+2025-11-10 20:12:48.805 -03:00 [INF] Content root path: /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API
+2025-11-10 20:12:57.159 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/index.html - null null
+2025-11-10 20:12:57.222 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/index.html - 200 null text/html;charset=utf-8 64.2933ms
+2025-11-10 20:12:57.360 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - null null
+2025-11-10 20:12:57.449 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.5592ms
+2025-11-10 20:13:01.254 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/api/Clientes - null null
+2025-11-10 20:13:01.262 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-10 20:13:01.265 -03:00 [INF] Executing endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 20:13:01.279 -03:00 [INF] Route matched with {action = "GetClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[MagmaAssessment.Core.Models.Cliente]]] GetClientes() on controller MagmaAssessment.API.Controllers.ClientesController (MagmaAssessment.API).
+2025-11-10 20:13:01.281 -03:00 [INF] Conectando ao MongoDB: ***@localhost:27017/magma_assessment?authSource=admin
+2025-11-10 20:13:01.469 -03:00 [INF] Indices criados para coleção de clientes
+2025-11-10 20:13:01.470 -03:00 [INF] Repository de clientes inicializado com sucesso
+2025-11-10 20:13:01.472 -03:00 [INF] GET /api/clientes - obtendo todos os clientes
+2025-11-10 20:13:01.474 -03:00 [INF] Obtendo todos os clientes do banco de dados
+2025-11-10 20:13:01.518 -03:00 [INF] Total de 4 clientes obtidos
+2025-11-10 20:13:01.522 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MagmaAssessment.Core.Models.Cliente, MagmaAssessment.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-10 20:13:01.533 -03:00 [INF] Executed action MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API) in 251.7782ms
+2025-11-10 20:13:01.533 -03:00 [INF] Executed endpoint 'MagmaAssessment.API.Controllers.ClientesController.GetClientes (MagmaAssessment.API)'
+2025-11-10 20:13:01.534 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/api/Clientes - 200 null application/json; charset=utf-8 279.4004ms
+2025-11-10 20:13:08.694 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/health - null null
+2025-11-10 20:13:08.695 -03:00 [INF] Executing endpoint 'HTTP: GET /health'
+2025-11-10 20:13:08.702 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:13:08.712 -03:00 [INF] Writing value of type '<>f__AnonymousType4`3' as Json.
+2025-11-10 20:13:08.716 -03:00 [INF] Executed endpoint 'HTTP: GET /health'
+2025-11-10 20:13:08.717 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/health - 200 null application/json; charset=utf-8 22.5119ms
+2025-11-10 20:13:27.381 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/health - null null
+2025-11-10 20:13:27.382 -03:00 [INF] Executing endpoint 'HTTP: GET /health'
+2025-11-10 20:13:27.382 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:13:27.383 -03:00 [INF] Writing value of type '<>f__AnonymousType4`3' as Json.
+2025-11-10 20:13:27.385 -03:00 [INF] Executed endpoint 'HTTP: GET /health'
+2025-11-10 20:13:27.386 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/health - 200 null application/json; charset=utf-8 5.1113ms
+2025-11-10 20:13:39.367 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativos - null null
+2025-11-10 20:13:39.367 -03:00 [INF] Executing endpoint 'HTTP: GET /ativos'
+2025-11-10 20:13:39.378 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:13:39.385 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:13:39.392 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:13:39.393 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:13:40.422 -03:00 [INF] Received HTTP response headers after 1026.9646ms - 404
+2025-11-10 20:13:40.423 -03:00 [INF] End processing HTTP request after 1031.1886ms - 404
+2025-11-10 20:13:40.425 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:13:40.426 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:13:40.427 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:13:40.432 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:13:40.434 -03:00 [INF] Executed endpoint 'HTTP: GET /ativos'
+2025-11-10 20:13:40.436 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativos - 200 null application/json; charset=utf-8 1068.9481ms
+2025-11-10 20:14:18.656 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativos - null null
+2025-11-10 20:14:18.656 -03:00 [INF] Executing endpoint 'HTTP: GET /ativos'
+2025-11-10 20:14:18.657 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:14:18.658 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:14:18.658 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:14:18.658 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:14:18.918 -03:00 [INF] Received HTTP response headers after 259.2959ms - 404
+2025-11-10 20:14:18.918 -03:00 [INF] End processing HTTP request after 260.2729ms - 404
+2025-11-10 20:14:18.919 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:14:18.919 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:14:18.919 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:14:18.919 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:14:18.920 -03:00 [INF] Executed endpoint 'HTTP: GET /ativos'
+2025-11-10 20:14:18.921 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativos - 200 null application/json; charset=utf-8 264.6765ms
+2025-11-10 20:15:22.294 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/computadores-inativos - null null
+2025-11-10 20:15:22.295 -03:00 [INF] Executing endpoint 'HTTP: GET /computadores-inativos'
+2025-11-10 20:15:22.296 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:15:22.299 -03:00 [INF] Buscando computadores inativos (>60 dias sem comunicação)
+2025-11-10 20:15:22.299 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:15:22.299 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:15:22.299 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:15:22.917 -03:00 [INF] Received HTTP response headers after 617.5174ms - 404
+2025-11-10 20:15:22.918 -03:00 [INF] End processing HTTP request after 618.628ms - 404
+2025-11-10 20:15:22.918 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:15:22.919 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:15:22.921 -03:00 [INF] Encontrados 3 computadores inativos de 5 ativos totais
+2025-11-10 20:15:22.923 -03:00 [WRN] Workstation-Design-Mock (Workstation) - 120 dias sem comunicação - Última: 13/07/2025
+2025-11-10 20:15:22.923 -03:00 [WRN] PC-Financeiro-Mock (Computer) - 90 dias sem comunicação - Última: 12/08/2025
+2025-11-10 20:15:22.924 -03:00 [WRN] Desktop-RH-Mock (Desktop) - 75 dias sem comunicação - Última: 27/08/2025
+2025-11-10 20:15:22.924 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:15:22.924 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:15:22.925 -03:00 [INF] Executed endpoint 'HTTP: GET /computadores-inativos'
+2025-11-10 20:15:22.926 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/computadores-inativos - 200 null application/json; charset=utf-8 631.5812ms
+2025-11-10 20:18:07.065 -03:00 [INF] Application is shutting down...
+2025-11-10 20:18:16.936 -03:00 [INF] Iniciando aplicação Magma3 Backend Assessment
+2025-11-10 20:18:17.033 -03:00 [INF] Now listening on: http://localhost:5059
+2025-11-10 20:18:17.036 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 20:18:17.036 -03:00 [INF] Hosting environment: Development
+2025-11-10 20:18:17.036 -03:00 [INF] Content root path: /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API
+2025-11-10 20:18:31.479 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/index.html - null null
+2025-11-10 20:18:31.546 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/index.html - 200 null text/html;charset=utf-8 67.5517ms
+2025-11-10 20:18:31.719 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - null null
+2025-11-10 20:18:31.796 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 77.0032ms
+2025-11-10 20:18:37.433 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativos - null null
+2025-11-10 20:18:37.438 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-10 20:18:37.441 -03:00 [INF] Executing endpoint 'HTTP: GET /ativos'
+2025-11-10 20:18:37.454 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:18:37.460 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:18:37.469 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:18:37.470 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:18:38.206 -03:00 [INF] Received HTTP response headers after 734.4307ms - 404
+2025-11-10 20:18:38.207 -03:00 [INF] End processing HTTP request after 739.5226ms - 404
+2025-11-10 20:18:38.210 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:18:38.210 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:18:38.213 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:18:38.220 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:18:38.229 -03:00 [INF] Executed endpoint 'HTTP: GET /ativos'
+2025-11-10 20:18:38.230 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativos - 200 null application/json; charset=utf-8 796.8825ms
+2025-11-10 20:18:49.798 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/computadores-inativos - null null
+2025-11-10 20:18:49.799 -03:00 [INF] Executing endpoint 'HTTP: GET /computadores-inativos'
+2025-11-10 20:18:49.800 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:18:49.802 -03:00 [INF] Buscando computadores inativos (>60 dias sem comunicação)
+2025-11-10 20:18:49.803 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:18:49.803 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:18:49.803 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:18:49.957 -03:00 [INF] Received HTTP response headers after 153.3473ms - 404
+2025-11-10 20:18:49.957 -03:00 [INF] End processing HTTP request after 154.24ms - 404
+2025-11-10 20:18:49.958 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:18:49.958 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:18:49.961 -03:00 [INF] Encontrados 3 computadores inativos de 5 ativos totais
+2025-11-10 20:18:49.961 -03:00 [WRN] Workstation-Design-Mock (Workstation) - 120 dias sem comunicação - Última: 13/07/2025
+2025-11-10 20:18:49.962 -03:00 [WRN] PC-Financeiro-Mock (Computer) - 90 dias sem comunicação - Última: 12/08/2025
+2025-11-10 20:18:49.962 -03:00 [WRN] Desktop-RH-Mock (Desktop) - 75 dias sem comunicação - Última: 27/08/2025
+2025-11-10 20:18:49.962 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:18:49.966 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:18:49.967 -03:00 [INF] Executed endpoint 'HTTP: GET /computadores-inativos'
+2025-11-10 20:18:49.967 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/computadores-inativos - 200 null application/json; charset=utf-8 169.3736ms
+2025-11-10 20:19:04.957 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativos - null null
+2025-11-10 20:19:04.958 -03:00 [INF] Executing endpoint 'HTTP: GET /ativos'
+2025-11-10 20:19:04.959 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:19:04.959 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:19:04.959 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:19:04.959 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:19:05.115 -03:00 [INF] Received HTTP response headers after 155.1127ms - 404
+2025-11-10 20:19:05.115 -03:00 [INF] End processing HTTP request after 155.9081ms - 404
+2025-11-10 20:19:05.115 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:19:05.115 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:19:05.116 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:19:05.116 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:19:05.117 -03:00 [INF] Executed endpoint 'HTTP: GET /ativos'
+2025-11-10 20:19:05.117 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativos - 200 null application/json; charset=utf-8 160.1714ms
+2025-11-10 20:19:15.501 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativo/cd340439-4b93-4abd-b565-a735a8da9cba - null null
+2025-11-10 20:19:15.503 -03:00 [INF] Executing endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:19:15.504 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:19:15.508 -03:00 [INF] Buscando ativo com ID: cd340439-4b93-4abd-b565-a735a8da9cba
+2025-11-10 20:19:15.509 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAsset/cd340439-4b93-4abd-b565-a735a8da9cba
+2025-11-10 20:19:15.509 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAsset/cd340439-4b93-4abd-b565-a735a8da9cba
+2025-11-10 20:19:15.781 -03:00 [INF] Received HTTP response headers after 271.7775ms - 404
+2025-11-10 20:19:15.782 -03:00 [INF] End processing HTTP request after 272.5853ms - 404
+2025-11-10 20:19:15.782 -03:00 [WRN] Ativo com ID cd340439-4b93-4abd-b565-a735a8da9cba não encontrado
+2025-11-10 20:19:15.783 -03:00 [INF] Setting HTTP status code 404.
+2025-11-10 20:19:15.783 -03:00 [INF] Executed endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:19:15.783 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativo/cd340439-4b93-4abd-b565-a735a8da9cba - 404 0 null 281.6345ms
+2025-11-10 20:19:50.951 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativo/cd340439-4b93-4abd-b565-a735a8da9cba - null null
+2025-11-10 20:19:50.951 -03:00 [INF] Executing endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:19:50.952 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:19:50.952 -03:00 [INF] Buscando ativo com ID: cd340439-4b93-4abd-b565-a735a8da9cba
+2025-11-10 20:19:50.952 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAsset/cd340439-4b93-4abd-b565-a735a8da9cba
+2025-11-10 20:19:50.952 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAsset/cd340439-4b93-4abd-b565-a735a8da9cba
+2025-11-10 20:19:51.105 -03:00 [INF] Received HTTP response headers after 152.1523ms - 404
+2025-11-10 20:19:51.105 -03:00 [INF] End processing HTTP request after 152.8882ms - 404
+2025-11-10 20:19:51.105 -03:00 [WRN] Ativo com ID cd340439-4b93-4abd-b565-a735a8da9cba não encontrado
+2025-11-10 20:19:51.106 -03:00 [INF] Setting HTTP status code 404.
+2025-11-10 20:19:51.106 -03:00 [INF] Executed endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:19:51.106 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativo/cd340439-4b93-4abd-b565-a735a8da9cba - 404 0 null 155.3956ms
+2025-11-10 20:20:16.397 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativos - null null
+2025-11-10 20:20:16.397 -03:00 [INF] Executing endpoint 'HTTP: GET /ativos'
+2025-11-10 20:20:16.398 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:20:16.398 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:20:16.398 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:20:16.398 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:20:16.601 -03:00 [INF] Received HTTP response headers after 202.8688ms - 404
+2025-11-10 20:20:16.602 -03:00 [INF] End processing HTTP request after 203.8511ms - 404
+2025-11-10 20:20:16.603 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:20:16.603 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:20:16.603 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:20:16.604 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:20:16.604 -03:00 [INF] Executed endpoint 'HTTP: GET /ativos'
+2025-11-10 20:20:16.605 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativos - 200 null application/json; charset=utf-8 207.6849ms
+2025-11-10 20:20:28.371 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativo/671f436e-8d89-4771-b52a-1b952609ab52 - null null
+2025-11-10 20:20:28.371 -03:00 [INF] Executing endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:20:28.372 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:20:28.372 -03:00 [INF] Buscando ativo com ID: 671f436e-8d89-4771-b52a-1b952609ab52
+2025-11-10 20:20:28.372 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAsset/671f436e-8d89-4771-b52a-1b952609ab52
+2025-11-10 20:20:28.372 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAsset/671f436e-8d89-4771-b52a-1b952609ab52
+2025-11-10 20:20:28.544 -03:00 [INF] Received HTTP response headers after 170.9849ms - 404
+2025-11-10 20:20:28.544 -03:00 [INF] End processing HTTP request after 171.93ms - 404
+2025-11-10 20:20:28.545 -03:00 [WRN] Ativo com ID 671f436e-8d89-4771-b52a-1b952609ab52 não encontrado
+2025-11-10 20:20:28.545 -03:00 [INF] Setting HTTP status code 404.
+2025-11-10 20:20:28.545 -03:00 [INF] Executed endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:20:28.546 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativo/671f436e-8d89-4771-b52a-1b952609ab52 - 404 0 null 174.5275ms
+2025-11-10 20:22:46.129 -03:00 [INF] Application is shutting down...
+2025-11-10 20:23:05.792 -03:00 [INF] Iniciando aplicação Magma3 Backend Assessment
+2025-11-10 20:23:05.892 -03:00 [INF] Now listening on: http://localhost:5059
+2025-11-10 20:23:05.895 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 20:23:05.895 -03:00 [INF] Hosting environment: Development
+2025-11-10 20:23:05.895 -03:00 [INF] Content root path: /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API
+2025-11-10 20:23:08.102 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/index.html - null null
+2025-11-10 20:23:08.187 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/index.html - 200 null text/html;charset=utf-8 86.4591ms
+2025-11-10 20:23:08.339 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - null null
+2025-11-10 20:23:08.419 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.7522ms
+2025-11-10 20:23:41.286 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativos - null null
+2025-11-10 20:23:41.292 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-10 20:23:41.294 -03:00 [INF] Executing endpoint 'HTTP: GET /ativos'
+2025-11-10 20:23:41.307 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:23:41.312 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:23:41.321 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:23:41.322 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAssets?pagination=0
+2025-11-10 20:23:42.336 -03:00 [INF] Received HTTP response headers after 1011.8848ms - 404
+2025-11-10 20:23:42.336 -03:00 [INF] End processing HTTP request after 1017.2833ms - 404
+2025-11-10 20:23:42.339 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:23:42.340 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:23:42.342 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:23:42.348 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:23:42.357 -03:00 [INF] Executed endpoint 'HTTP: GET /ativos'
+2025-11-10 20:23:42.358 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativos - 200 null application/json; charset=utf-8 1072.7961ms
+2025-11-10 20:23:54.032 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativo/7641108230001 - null null
+2025-11-10 20:23:54.034 -03:00 [INF] Executing endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:23:54.035 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:23:54.038 -03:00 [INF] Buscando ativo com ID: 7641108230001
+2025-11-10 20:23:54.040 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAsset/7641108230001
+2025-11-10 20:23:54.040 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAsset/7641108230001
+2025-11-10 20:23:54.204 -03:00 [INF] Received HTTP response headers after 163.7044ms - 404
+2025-11-10 20:23:54.205 -03:00 [INF] End processing HTTP request after 165.0919ms - 404
+2025-11-10 20:23:54.207 -03:00 [WRN] Ativo com ID 7641108230001 não encontrado
+2025-11-10 20:23:54.208 -03:00 [INF] Setting HTTP status code 404.
+2025-11-10 20:23:54.209 -03:00 [INF] Executed endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:23:54.209 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativo/7641108230001 - 404 0 null 176.9782ms
+2025-11-10 20:24:09.910 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativo/7641108230001 - null null
+2025-11-10 20:24:09.910 -03:00 [INF] Executing endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:24:09.912 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:24:09.912 -03:00 [INF] Buscando ativo com ID: 7641108230001
+2025-11-10 20:24:09.912 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/GetAsset/7641108230001
+2025-11-10 20:24:09.913 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/GetAsset/7641108230001
+2025-11-10 20:24:10.077 -03:00 [INF] Received HTTP response headers after 164.7095ms - 404
+2025-11-10 20:24:10.078 -03:00 [INF] End processing HTTP request after 165.8877ms - 404
+2025-11-10 20:24:10.079 -03:00 [WRN] Ativo com ID 7641108230001 não encontrado
+2025-11-10 20:24:10.079 -03:00 [INF] Setting HTTP status code 404.
+2025-11-10 20:24:10.080 -03:00 [INF] Executed endpoint 'HTTP: GET /ativo/{id}'
+2025-11-10 20:24:10.081 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativo/7641108230001 - 404 0 null 171.0639ms
+2025-11-10 20:24:21.283 -03:00 [INF] Application is shutting down...
