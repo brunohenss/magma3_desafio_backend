@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ksIcpm0xTAgi7j4D30COn1Zj4McHr3rfNt3aZmGTUCdL11IrrpaVLCMfBwcxJY3v+Y8FB6txBHI2DXtcgzSg+w==",
+  "dgSpecHash": "Ppt9t0vrWL5RAxfTL39Unzc3OlD8/I5Pz7OKKa/kyH1tXHZJybMuFX8PWCn/EmaxwWemRqc9oAssk79uiMGR2Q==",
   "success": true,
-  "projectFilePath": "/home/brunohenss/Link para Disk2/Projetos/magma3_desafio_tec/Magma3_Desafio_Tecnico/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
+  "projectFilePath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
   "expectedPackageFiles": [
-    "/home/brunohenss/.nuget/packages/mongodb.bson/2.23.1/mongodb.bson.2.23.1.nupkg.sha512",
-    "/home/brunohenss/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "/home/brunohenss/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
-    "/home/brunohenss/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+    "/home/link-dev/.nuget/packages/mongodb.bson/2.23.1/mongodb.bson.2.23.1.nupkg.sha512",
+    "/home/link-dev/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/home/link-dev/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/home/link-dev/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

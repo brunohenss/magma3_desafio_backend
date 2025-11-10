@@ -78,7 +78,7 @@ public class Force1Service : IForce1Service
 
         if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
         {
-            _logger.LogWarning("Acesso negado à API Force1. Usando dados simulados (mock).");
+            _logger.LogWarning("acesso negado a api force1. usando dados simulados (mock).");
 
             // mock de ativos caso nao autentique na api (fim didatico)
             return new List<Ativo>
@@ -109,7 +109,7 @@ public class Force1Service : IForce1Service
 
             if (ativos != null && ativos.Count > 0)
             {
-                _logger.LogInformation("Busca concluída. {Count} ativos encontrados", ativos.Count);
+                _logger.LogInformation("Busca concluida. {Count} ativos encontrados", ativos.Count);
                 return ativos;
             }
 
@@ -117,13 +117,13 @@ public class Force1Service : IForce1Service
             return new List<Ativo>();
         }
 
-        _logger.LogWarning("Resposta inválida da API. StatusCode: {StatusCode}", response.StatusCode);
+        _logger.LogWarning("Resposta invalida da API. StatusCode: {StatusCode}", response.StatusCode);
         return new List<Ativo>();
     }
     catch (BrokenCircuitException ex)
     {
-        _logger.LogError(ex, "Circuit breaker está aberto. Serviço temporariamente indisponível");
-        throw new InvalidOperationException("Serviço Force1 temporariamente indisponível", ex);
+        _logger.LogError(ex, "Circuit breaker esta aberto. Servico temporariamente indisponivel");
+        throw new InvalidOperationException("Servico Force1 temporariamente indisponivel", ex);
     }
     catch (Exception ex)
     {
