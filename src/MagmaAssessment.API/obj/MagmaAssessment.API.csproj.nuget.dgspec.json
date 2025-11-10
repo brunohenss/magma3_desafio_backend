@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.API/MagmaAssessment.API.csproj": {}
+    "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/MagmaAssessment.API.csproj": {}
   },
   "projects": {
-    "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.API/MagmaAssessment.API.csproj": {
+    "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/MagmaAssessment.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.API/MagmaAssessment.API.csproj",
+        "projectUniqueName": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/MagmaAssessment.API.csproj",
         "projectName": "MagmaAssessment.API",
-        "projectPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.API/MagmaAssessment.API.csproj",
-        "packagesPath": "/home/link-dev/.nuget/packages/",
-        "outputPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.API/obj/",
+        "projectPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/MagmaAssessment.API.csproj",
+        "packagesPath": "/home/brunohenss/.nuget/packages/",
+        "outputPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/link-dev/.nuget/NuGet/NuGet.Config"
+          "/home/brunohenss/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,11 +26,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {
-                "projectPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj"
+              "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {
+                "projectPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj"
               },
-              "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj": {
-                "projectPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj"
+              "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj": {
+                "projectPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj"
               }
             }
           }
@@ -45,13 +45,37 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.11.4, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.21, )"
             },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "System.Diagnostics.DiagnosticSource": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             }
           },
           "imports": [
@@ -77,17 +101,17 @@
         }
       }
     },
-    "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {
+    "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
+        "projectUniqueName": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
         "projectName": "MagmaAssessment.Core",
-        "projectPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
-        "packagesPath": "/home/link-dev/.nuget/packages/",
-        "outputPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/obj/",
+        "projectPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
+        "packagesPath": "/home/brunohenss/.nuget/packages/",
+        "outputPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/link-dev/.nuget/NuGet/NuGet.Config"
+          "/home/brunohenss/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -140,17 +164,17 @@
         }
       }
     },
-    "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj": {
+    "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj",
+        "projectUniqueName": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj",
         "projectName": "MagmaAssessment.Infrastructure",
-        "projectPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj",
-        "packagesPath": "/home/link-dev/.nuget/packages/",
-        "outputPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/",
+        "projectPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj",
+        "packagesPath": "/home/brunohenss/.nuget/packages/",
+        "outputPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/link-dev/.nuget/NuGet/NuGet.Config"
+          "/home/brunohenss/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -162,8 +186,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {
-                "projectPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj"
+              "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {
+                "projectPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj"
               }
             }
           }
