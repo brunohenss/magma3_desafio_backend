@@ -4,7 +4,7 @@ namespace MagmaAssessment.Core.Interfaces;
 
 public interface IClienteRepository
 {
-    Task<Cliente> ObterTodos();
+    Task<List<Cliente>> ObterTodos();
     Task<Cliente?> ObterPorId(string id);
     Task<Cliente?> ObterPorEmail(string email);
     Task<Cliente> Adicionar(Cliente cliente);
