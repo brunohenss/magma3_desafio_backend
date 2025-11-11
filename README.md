@@ -443,7 +443,7 @@ Implementadas com Data Annotations nos modelos:
 **Bruno Henrique**
 - Email: brunoricksp@gmail.com
 - GitHub: github.com/brunohenss
-- LinkedIn: linkedin.com/in/bruno-henrique
+- LinkedIn: linkedin.com/in/bruno-henrique-8b723b144
 
 ## Licença
 
