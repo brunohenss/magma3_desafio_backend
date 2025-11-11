@@ -1,6 +1,6 @@
 # Magma3 Backend Assessment
 
-Solução completa do desafio técnico para a posição de Senior Backend Developer na Magma3.
+Solução completa do desafio técnico para a posição de Pleno Backend Developer na Magma3.
 
 ## Sumário
 
