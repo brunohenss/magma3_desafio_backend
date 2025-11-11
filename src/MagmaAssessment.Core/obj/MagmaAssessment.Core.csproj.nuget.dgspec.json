@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {}
+    "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {}
   },
   "projects": {
-    "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {
+    "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
+        "projectUniqueName": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
         "projectName": "MagmaAssessment.Core",
-        "projectPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
-        "packagesPath": "/home/link-dev/.nuget/packages/",
-        "outputPath": "/home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Core/obj/",
+        "projectPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/MagmaAssessment.Core.csproj",
+        "packagesPath": "/home/brunohenss/.nuget/packages/",
+        "outputPath": "/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/link-dev/.nuget/NuGet/NuGet.Config"
+          "/home/brunohenss/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -38,6 +38,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DocuSign.eSign": {
+              "target": "Package",
+              "version": "[3.0.0-rc, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[5.36.0, )"
+            },
             "MongoDB.Bson": {
               "target": "Package",
               "version": "[2.23.1, )"

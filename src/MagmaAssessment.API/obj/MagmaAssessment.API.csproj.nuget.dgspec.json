@@ -47,7 +47,11 @@
           "dependencies": {
             "Azure.Identity": {
               "target": "Package",
-              "version": "[1.11.4, )"
+              "version": "[1.17.0, )"
+            },
+            "DocuSign.eSign": {
+              "target": "Package",
+              "version": "[3.0.0-rc, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -135,6 +139,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DocuSign.eSign": {
+              "target": "Package",
+              "version": "[3.0.0-rc, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[5.36.0, )"
+            },
             "MongoDB.Bson": {
               "target": "Package",
               "version": "[2.23.1, )"
@@ -204,11 +216,11 @@
           "dependencies": {
             "Azure.Identity": {
               "target": "Package",
-              "version": "[1.10.4, )"
+              "version": "[1.17.0, )"
             },
-            "DocuSign.eSign.dll": {
+            "DocuSign.eSign": {
               "target": "Package",
-              "version": "[6.8.0, )"
+              "version": "[3.0.0-rc, )"
             },
             "GoogleMaps.LocationServices": {
               "target": "Package",
@@ -228,7 +240,11 @@
             },
             "Microsoft.Graph": {
               "target": "Package",
-              "version": "[5.38.0, )"
+              "version": "[5.96.0, )"
+            },
+            "Microsoft.Graph.Core": {
+              "target": "Package",
+              "version": "[3.2.4, )"
             },
             "MongoDB.Driver": {
               "target": "Package",

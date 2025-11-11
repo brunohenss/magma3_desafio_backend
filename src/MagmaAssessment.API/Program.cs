@@ -45,6 +45,18 @@ builder.Services.AddHttpClient<IForce1Service, Force1Service>();
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
+var configuration = builder.Configuration;
+
+builder.Services.AddScoped<IMicrosoftGraphService, MicrosoftGraphService>();
+
+builder.Services.AddScoped<IGoogleMapsService, GoogleMapsService>();
+
+builder.Services.AddScoped<IDocuSignService>(sp =>
+{
+    var configuration = sp.GetRequiredService<IConfiguration>();
+    return new DocuSignService(configuration);
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

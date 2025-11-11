@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MagmaAssessment.Infrastructure
-build_property.ProjectDir = /home/link-dev/Projetos/magma/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/
+build_property.ProjectDir = /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

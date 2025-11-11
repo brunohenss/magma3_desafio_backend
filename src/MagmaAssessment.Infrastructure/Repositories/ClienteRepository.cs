@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using DocuSign.eSign.Model;
 
-namespace MagmaAssessment.Infraestructure.Repositories;
+namespace MagmaAssessment.Infrastructure.Repositories;
 
 // questão 3
 // implementa repositorio de clientes usando MongoDB

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Graph.Drives.Item.Items.Item.Workbook.Functions.VarA;
 using System.Collections.Concurrent;
 
-namespace MagmaAssessment.Infraestructure.Repositories;
+namespace MagmaAssessment.Infrastructure.Repositories;
 // implementção em memoria do repositorio de produtos (questao 2)
 public class ProdutoRepository : IProdutoRepository
 {

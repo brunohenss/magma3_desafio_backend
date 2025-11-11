@@ -992,3 +992,47 @@ System.InvalidOperationException: Servico Force1 temporariamente indisponivel
 2025-11-10 20:24:10.080 -03:00 [INF] Executed endpoint 'HTTP: GET /ativo/{id}'
 2025-11-10 20:24:10.081 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativo/7641108230001 - 404 0 null 171.0639ms
 2025-11-10 20:24:21.283 -03:00 [INF] Application is shutting down...
+2025-11-10 20:37:04.988 -03:00 [INF] Iniciando aplicação Magma3 Backend Assessment
+2025-11-10 20:37:05.094 -03:00 [INF] Now listening on: http://localhost:5059
+2025-11-10 20:37:05.096 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 20:37:05.097 -03:00 [INF] Hosting environment: Development
+2025-11-10 20:37:05.097 -03:00 [INF] Content root path: /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.API
+2025-11-10 20:37:10.060 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/index.html - null null
+2025-11-10 20:37:10.127 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/index.html - 200 null text/html;charset=utf-8 67.2788ms
+2025-11-10 20:37:10.263 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - null null
+2025-11-10 20:37:10.354 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.0022ms
+2025-11-10 20:37:17.766 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/ativos - null null
+2025-11-10 20:37:17.771 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-10 20:37:17.773 -03:00 [INF] Executing endpoint 'HTTP: GET /ativos'
+2025-11-10 20:37:17.787 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:37:17.792 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:37:17.800 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 20:37:17.801 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 20:37:18.779 -03:00 [INF] Received HTTP response headers after 975.4009ms - 404
+2025-11-10 20:37:18.779 -03:00 [INF] End processing HTTP request after 980.8411ms - 404
+2025-11-10 20:37:18.782 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:37:18.783 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:37:18.786 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:37:18.792 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:37:18.802 -03:00 [INF] Executed endpoint 'HTTP: GET /ativos'
+2025-11-10 20:37:18.804 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/ativos - 200 null application/json; charset=utf-8 1037.5406ms
+2025-11-10 20:37:31.346 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5059/computadores-inativos - null null
+2025-11-10 20:37:31.347 -03:00 [INF] Executing endpoint 'HTTP: GET /computadores-inativos'
+2025-11-10 20:37:31.348 -03:00 [INF] Autenticação configurada para usuário: provadev, Enterprise: magma3teste
+2025-11-10 20:37:31.350 -03:00 [INF] Buscando computadores inativos (>60 dias sem comunicação)
+2025-11-10 20:37:31.351 -03:00 [INF] Iniciando busca de todos os ativos
+2025-11-10 20:37:31.351 -03:00 [INF] Start processing HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 20:37:31.351 -03:00 [INF] Sending HTTP request GET https://api.magma-3.com/v2/GetAssets?pagination=0
+2025-11-10 20:37:31.501 -03:00 [INF] Received HTTP response headers after 150.0273ms - 404
+2025-11-10 20:37:31.502 -03:00 [INF] End processing HTTP request after 150.991ms - 404
+2025-11-10 20:37:31.502 -03:00 [WRN] Endpoint não encontrado (404). Verifique a URL. Usando mock.
+2025-11-10 20:37:31.503 -03:00 [INF] Retornando dados MOCK para demonstração
+2025-11-10 20:37:31.505 -03:00 [INF] Encontrados 3 computadores inativos de 5 ativos totais
+2025-11-10 20:37:31.506 -03:00 [WRN] Workstation-Design-Mock (Workstation) - 120 dias sem comunicação - Última: 13/07/2025
+2025-11-10 20:37:31.506 -03:00 [WRN] PC-Financeiro-Mock (Computer) - 90 dias sem comunicação - Última: 12/08/2025
+2025-11-10 20:37:31.506 -03:00 [WRN] Desktop-RH-Mock (Desktop) - 75 dias sem comunicação - Última: 27/08/2025
+2025-11-10 20:37:31.507 -03:00 [INF] Setting HTTP status code 200.
+2025-11-10 20:37:31.511 -03:00 [INF] Writing value of type 'List`1' as Json.
+2025-11-10 20:37:31.511 -03:00 [INF] Executed endpoint 'HTTP: GET /computadores-inativos'
+2025-11-10 20:37:31.511 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5059/computadores-inativos - 200 null application/json; charset=utf-8 165.3654ms
+2025-11-10 20:50:17.378 -03:00 [INF] Application is shutting down...

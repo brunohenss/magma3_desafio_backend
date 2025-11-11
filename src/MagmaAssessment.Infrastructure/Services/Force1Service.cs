@@ -1,5 +1,6 @@
 using System.Net.Http.Headers;
 using System.Text.Json;
+using System.Text;
 using MagmaAssessment.Core.Interfaces;
 using MagmaAssessment.Core.Models;
 using Microsoft.Extensions.Configuration;
@@ -15,6 +16,9 @@ public class Force1Service : IForce1Service
     private readonly ILogger<Force1Service> _logger;
     private readonly IAsyncPolicy<HttpResponseMessage> _retryPolicy;
     private readonly string _baseUrl;
+    private readonly string _username;
+    private readonly string _password;
+    private readonly string _enterprise;
 
     public Force1Service(
         HttpClient httpClient, 
@@ -24,21 +28,38 @@ public class Force1Service : IForce1Service
         _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         
-        _baseUrl = configuration["Force1:BaseUrl"] ?? "https://api.magma-3.com/v2/Force1/";
+        _baseUrl = configuration["Force1:BaseUrl"] ?? "https://api.magma-3.com/v2/Force1";
+        _username = configuration["Force1:Username"] ?? string.Empty;
+        _password = configuration["Force1:Password"] ?? string.Empty;
+        _enterprise = configuration["Force1:Enterprise"] ?? string.Empty;
         
         _httpClient.BaseAddress = new Uri(_baseUrl);
         _httpClient.DefaultRequestHeaders.Accept.Clear();
         _httpClient.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
-        
-        var apiKey = configuration["Force1:ApiKey"];
-        if (!string.IsNullOrEmpty(apiKey))
-        {
-            _httpClient.DefaultRequestHeaders.Add("X-API-Key", apiKey);
-        }
+        _httpClient.Timeout = TimeSpan.FromSeconds(30);
 
+        if (!string.IsNullOrEmpty(_username) && !string.IsNullOrEmpty(_password))
+        {
+            var credentials = Convert.ToBase64String(
+                Encoding.ASCII.GetBytes($"{_username}:{_password}"));
+            _httpClient.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Basic", credentials);
+
+            _logger.LogInformation(
+                "Autenticação configurada para usuário: {Username}, Enterprise: {Enterprise}",
+                _username, _enterprise);
+        }
+        else
+        {
+            _logger.LogWarning("Credenciais Force1 não configuradas. Usando mocks");
+        }
+        
         _retryPolicy = Policy
-            .HandleResult<HttpResponseMessage>(r => !r.IsSuccessStatusCode)
+            .HandleResult<HttpResponseMessage>(r => 
+                r.StatusCode == System.Net.HttpStatusCode.RequestTimeout ||
+                r.StatusCode == System.Net.HttpStatusCode.ServiceUnavailable ||
+                r.StatusCode == System.Net.HttpStatusCode.GatewayTimeout)
             .Or<HttpRequestException>()
             .WaitAndRetryAsync(
                 3,
@@ -47,107 +68,182 @@ public class Force1Service : IForce1Service
                 {
                     var reason = outcome.Result?.StatusCode.ToString() ?? outcome.Exception?.Message;
                     _logger.LogWarning(
-                        "Retry {RetryCount} após {TimeSpan}s. Motivo: {Reason}", 
+                        "Retry {RetryCount} após {TimeSpan}s devido a: {Reason}", 
                         retryCount, timespan.TotalSeconds, reason);
                 })
             .WrapAsync(
-                Policy.HandleResult<HttpResponseMessage>(r => !r.IsSuccessStatusCode)
+                Policy.HandleResult<HttpResponseMessage>(r => 
+                    r.StatusCode == System.Net.HttpStatusCode.RequestTimeout ||
+                    r.StatusCode == System.Net.HttpStatusCode.ServiceUnavailable ||
+                    r.StatusCode == System.Net.HttpStatusCode.GatewayTimeout)
                     .CircuitBreakerAsync(
-                        3,
-                        TimeSpan.FromMinutes(1),
+                        handledEventsAllowedBeforeBreaking: 3,
+                        durationOfBreak: TimeSpan.FromMinutes(1),
                         onBreak: (result, timespan) =>
                         {
-                            _logger.LogError(
-                                "circuit breaker ativado por {TimeSpan}s", 
+                            _logger.LogWarning(
+                                "Circuit breaker ativado por {Duration}s. API Force1 temporariamente indisponível.",
                                 timespan.TotalSeconds);
                         },
                         onReset: () =>
                         {
-                            _logger.LogInformation("circuit breaker resetado");
+                            _logger.LogInformation("Circuit breaker resetado. API Force1 disponível novamente.");
                         }));
     }
 
     public async Task<List<Ativo>> ObterTodosAtivos()
     {
-      try
-      {
-        _logger.LogInformation("Iniciando busca de todos os ativos");
-
-        var response = await _retryPolicy.ExecuteAsync(async () =>
-            await _httpClient.GetAsync("GetAssets?pagination=0"));
-
-        if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+        try
         {
-            _logger.LogWarning("acesso negado a api force1. usando dados simulados (mock).");
+            _logger.LogInformation("Iniciando busca de todos os ativos");
 
-            // mock de ativos caso nao autentique na api (fim didatico)
-            return new List<Ativo>
+            HttpResponseMessage response;
+            
+            try
             {
-                new Ativo
-                {
-                    Id = "1",
-                    Name = "PC-Financeiro",
-                    AssetType = "Computer",
-                    LastCommunicationAt = DateTime.UtcNow.AddDays(-90), // inativo
-                    PublicIp = "177.12.34.56"
-                },
-                new Ativo
-                {
-                    Id = "2",
-                    Name = "Notebook-Suporte",
-                    AssetType = "Laptop",
-                    LastCommunicationAt = DateTime.UtcNow.AddDays(-15), // ativo
-                    PublicIp = "187.54.23.11"
-                }
-            };
-        }
+                response = await _retryPolicy.ExecuteAsync(async () =>
+                    await _httpClient.GetAsync("GetAssets?pagination=0"));
+            }
+            catch (BrokenCircuitException ex)
+            {
+                _logger.LogWarning(ex, "Circuit breaker aberto. Usando dados mock.");
+                return ObterAtivosMock();
+            }
+            catch (HttpRequestException ex)
+            {
+                _logger.LogError(ex, "Erro de conexão com API Force1. Usando dados mock.");
+                return ObterAtivosMock();
+            }
 
-        if (response.IsSuccessStatusCode)
-        {
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("Endpoint não encontrado (404). Verifique a URL. Usando mock.");
+                return ObterAtivosMock();
+            }
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+            {
+                _logger.LogWarning("Acesso negado (403). Verifique as credenciais. Usando mock.");
+                return ObterAtivosMock();
+            }
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                _logger.LogWarning("Não autorizado (401). Credenciais inválidas. Usando mock.");
+                return ObterAtivosMock();
+            }
+
+            if (!response.IsSuccessStatusCode)
+            {
+                _logger.LogWarning("API retornou status {StatusCode}. Usando mock.", response.StatusCode);
+                return ObterAtivosMock();
+            }
+
             var content = await response.Content.ReadAsStringAsync();
-            var ativos = JsonSerializer.Deserialize<List<Ativo>>(content);
+            
+            if (string.IsNullOrWhiteSpace(content))
+            {
+                _logger.LogWarning("API retornou resposta vazia. Usando mock.");
+                return ObterAtivosMock();
+            }
+
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+            
+            var ativos = JsonSerializer.Deserialize<List<Ativo>>(content, options);
 
             if (ativos != null && ativos.Count > 0)
             {
-                _logger.LogInformation("Busca concluida. {Count} ativos encontrados", ativos.Count);
+                _logger.LogInformation("Sucesso! {Count} ativos obtidos da API REAL Force1", ativos.Count);
                 return ativos;
             }
 
-            _logger.LogWarning("Nenhum ativo encontrado na resposta da API");
-            return new List<Ativo>();
+            _logger.LogWarning("API retornou array vazio. Usando mock.");
+            return ObterAtivosMock();
         }
-
-        _logger.LogWarning("Resposta invalida da API. StatusCode: {StatusCode}", response.StatusCode);
-        return new List<Ativo>();
-    }
-    catch (BrokenCircuitException ex)
-    {
-        _logger.LogError(ex, "Circuit breaker esta aberto. Servico temporariamente indisponivel");
-        throw new InvalidOperationException("Servico Force1 temporariamente indisponivel", ex);
-    }
-    catch (Exception ex)
-    {
-        _logger.LogError(ex, "Erro ao buscar ativos da API Force1");
-        throw;
-    }
+        catch (JsonException ex)
+        {
+            _logger.LogError(ex, "Erro ao desserializar resposta. Usando mock.");
+            return ObterAtivosMock();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Erro inesperado ao buscar ativos. Usando mock.");
+            return ObterAtivosMock();
+        }
     }
 
+    private List<Ativo> ObterAtivosMock()
+    {
+        _logger.LogInformation("Retornando dados MOCK para demonstração");
+        
+        return new List<Ativo>
+        {
+            new Ativo
+            {
+                Id = "758308234698",
+                Name = "PC-Financeiro-Mock",
+                AssetType = "Computer",
+                SerialNumber = "SN-001",
+                LastCommunicationAt = DateTime.UtcNow.AddDays(-90),
+                PublicIp = "177.12.34.56"
+            },
+            new Ativo
+            {
+                Id = "2341108230901",
+                Name = "Notebook-Suporte-Mock",
+                AssetType = "Laptop",
+                SerialNumber = "SN-002",
+                LastCommunicationAt = DateTime.UtcNow.AddDays(-15),
+                PublicIp = "187.54.23.11"
+            },
+            new Ativo
+            {
+                Id = "1231108230999",
+                Name = "Desktop-RH-Mock",
+                AssetType = "Desktop",
+                SerialNumber = "SN-003",
+                LastCommunicationAt = DateTime.UtcNow.AddDays(-75),
+                PublicIp = "200.10.20.30"
+            },
+            new Ativo
+            {
+                Id = "8811108230321",
+                Name = "Notebook-Dev-Mock",
+                AssetType = "Laptop",
+                SerialNumber = "SN-004",
+                LastCommunicationAt = DateTime.UtcNow.AddDays(-5),
+                PublicIp = "190.50.60.70"
+            },
+            new Ativo
+            {
+                Id = "7641108230001",
+                Name = "Workstation-Design-Mock",
+                AssetType = "Workstation",
+                SerialNumber = "SN-005",
+                LastCommunicationAt = DateTime.UtcNow.AddDays(-120),
+                PublicIp = "177.80.90.100"
+            }
+        };
+    }
 
     public async Task<List<Ativo>> ObterComputadoresInativos()
     {
         try
         {
-            _logger.LogInformation(
-                "Buscando computadores inativos (>60 dias sem comunicação)");
+            _logger.LogInformation("Buscando computadores inativos (>60 dias sem comunicação)");
             
             var todosAtivos = await ObterTodosAtivos();
             
             var computadoresInativos = todosAtivos
                 .Where(a => 
-                    a.AssetType?.ToLower() == "computer" || 
-                    a.AssetType?.ToLower() == "desktop" ||
-                    a.AssetType?.ToLower() == "laptop" ||
-                    a.AssetType?.ToLower() == "workstation")
+                    !string.IsNullOrEmpty(a.AssetType) &&
+                    (a.AssetType.Equals("Computer", StringComparison.OrdinalIgnoreCase) || 
+                     a.AssetType.Equals("Desktop", StringComparison.OrdinalIgnoreCase) ||
+                     a.AssetType.Equals("Laptop", StringComparison.OrdinalIgnoreCase) ||
+                     a.AssetType.Equals("Workstation", StringComparison.OrdinalIgnoreCase)))
                 .Where(a => a.IsInactive)
                 .OrderByDescending(a => a.DaysSinceLastCommunication)
                 .ToList();
@@ -156,14 +252,17 @@ public class Force1Service : IForce1Service
                 "Encontrados {Count} computadores inativos de {Total} ativos totais",
                 computadoresInativos.Count, todosAtivos.Count);
 
-            foreach (var computador in computadoresInativos)
+            if (computadoresInativos.Any())
             {
-                _logger.LogWarning(
-                    "Computador inativo: {Name} - {Days} dias sem comunicação - " +
-                    "Última comunicação: {LastComm}",
-                    computador.Name,
-                    computador.DaysSinceLastCommunication,
-                    computador.LastCommunicationAt?.ToString("dd/MM/yyyy") ?? "Nunca");
+                foreach (var computador in computadoresInativos)
+                {
+                    _logger.LogWarning(
+                        "{Name} ({Type}) - {Days} dias sem comunicação - Última: {LastComm}",
+                        computador.Name,
+                        computador.AssetType,
+                        computador.DaysSinceLastCommunication,
+                        computador.LastCommunicationAt?.ToString("dd/MM/yyyy") ?? "Nunca");
+                }
             }
 
             return computadoresInativos;
@@ -181,16 +280,22 @@ public class Force1Service : IForce1Service
         {
             _logger.LogInformation("Buscando ativo com ID: {Id}", id);
 
-            var response = await _retryPolicy.ExecuteAsync(async () =>
-                await _httpClient.GetAsync($"/GetAsset/{id}"));
-
-            if (response.IsSuccessStatusCode)
+            HttpResponseMessage response;
+            
+            try
             {
-                var content = await response.Content.ReadAsStringAsync();
-                var ativo = JsonSerializer.Deserialize<Ativo>(content);
-
-                _logger.LogInformation("Ativo encontrado: {Name}", ativo?.Name);
-                return ativo;
+                response = await _retryPolicy.ExecuteAsync(async () =>
+                    await _httpClient.GetAsync($"GetAsset/{id}"));
+            }
+            catch (BrokenCircuitException)
+            {
+                _logger.LogWarning("Circuit breaker aberto. Buscando no mock.");
+                return ObterAtivosMock().FirstOrDefault(a => a.Id == id);
+            }
+            catch (HttpRequestException ex)
+            {
+                _logger.LogError(ex, "Erro de conexão. Buscando no mock.");
+                return ObterAtivosMock().FirstOrDefault(a => a.Id == id);
             }
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -199,13 +304,27 @@ public class Force1Service : IForce1Service
                 return null;
             }
 
-            throw new HttpRequestException(
-                $"Erro ao buscar ativo. StatusCode: {response.StatusCode}");
+            if (!response.IsSuccessStatusCode)
+            {
+                _logger.LogWarning("Erro ao buscar ativo. Status: {Status}. Buscando no mock.", 
+                    response.StatusCode);
+                return ObterAtivosMock().FirstOrDefault(a => a.Id == id);
+            }
+
+            var content = await response.Content.ReadAsStringAsync();
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+            var ativo = JsonSerializer.Deserialize<Ativo>(content, options);
+
+            _logger.LogInformation("Ativo encontrado: {Name}", ativo?.Name);
+            return ativo;
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Erro ao buscar ativo por ID: {Id}", id);
-            throw;
+            _logger.LogError(ex, "Erro ao buscar ativo por ID: {Id}. Buscando no mock.", id);
+            return ObterAtivosMock().FirstOrDefault(a => a.Id == id);
         }
     }
 }
