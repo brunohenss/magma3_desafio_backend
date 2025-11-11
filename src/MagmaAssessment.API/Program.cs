@@ -14,16 +14,21 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
-        Title = "Magma3 Assessment API - Desafio técnico para processo seletivo",
+        Title = "Magma3 Assessment API",
         Version = "v1",
-        Description = "API desenvolvida para o desafio técnico Magma3 - Backend Developer",
+        Description = "API desenvolvida para o desafio técnico Magma3 - Backend Developer\n\n" +
+                      "**Questões Implementadas:**\n" +
+                      "- Questão 1: Consumo da API Force1 com Polly (Retry + Circuit Breaker)\n" +
+                      "- Questão 2: API REST de Produtos (CRUD completo)\n" +
+                      "- Questão 3: Integração MongoDB com Repository Pattern\n" +
+                      "- Questão 4: Correção de código (implementado)\n" +
+                      "- Questão 5: Integrações com Google Maps, DocuSign e Microsoft Graph",
         Contact = new Microsoft.OpenApi.Models.OpenApiContact
         {
             Name = "Bruno Henrique",
@@ -40,77 +45,88 @@ builder.Services.AddSwaggerGen(options =>
     }
 });
 
-// registra serviços e repositórios
 builder.Services.AddHttpClient<IForce1Service, Force1Service>();
-builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+
+builder.Services.AddSingleton<IProdutoRepository, ProdutoRepository>();
+
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
-var configuration = builder.Configuration;
-
-builder.Services.AddScoped<IMicrosoftGraphService, MicrosoftGraphService>();
-
 builder.Services.AddScoped<IGoogleMapsService, GoogleMapsService>();
-
-builder.Services.AddScoped<IDocuSignService>(sp =>
-{
-    var configuration = sp.GetRequiredService<IConfiguration>();
-    return new DocuSignService(configuration);
-});
+builder.Services.AddScoped<IDocuSignService, DocuSignService>();
+builder.Services.AddScoped<IMicrosoftGraphService, MicrosoftGraphService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "Magma3 Assessment API v1");
-        options.RoutePrefix = string.Empty; // swagger na raiz
+        options.RoutePrefix = string.Empty; // Swagger na raiz (http://localhost:5059)
+        options.DocumentTitle = "Magma3 Assessment API";
     });
 }
 
 app.UseHttpsRedirection();
-
 app.MapControllers();
 
-// health check endpoint
 app.MapGet("/health", () => Results.Ok(new
 {
     status = "healthy",
     timestamp = DateTime.UtcNow,
-    service = "Magma3 Backend Assessment"
+    service = "Magma3 Backend Assessment",
+    environment = app.Environment.EnvironmentName,
+    version = "1.0.0"
 }))
 .WithName("HealthCheck")
+.WithTags("Health")
 .WithOpenApi();
 
 app.MapGet("/ativos", async (IForce1Service force1Service) =>
 {
     var ativos = await force1Service.ObterTodosAtivos();
-    return Results.Ok(ativos);
+    return Results.Ok(new
+    {
+        total = ativos.Count,
+        ativos = ativos
+    });
 })
 .WithName("GetAtivos")
+.WithTags("Force1")
 .WithOpenApi();
 
 app.MapGet("/computadores-inativos", async (IForce1Service force1Service) =>
 {
     var computadoresInativos = await force1Service.ObterComputadoresInativos();
-    return Results.Ok(computadoresInativos);
+    return Results.Ok(new
+    {
+        total = computadoresInativos.Count,
+        computadores = computadoresInativos,
+        criterio = "Mais de 60 dias sem comunicação"
+    });
 })
 .WithName("GetComputadoresInativos")
+.WithTags("Force1")
 .WithOpenApi();
 
 app.MapGet("/ativo/{id}", async (string id, IForce1Service force1Service) =>
 {
     var ativo = await force1Service.ObterAtivoPorId(id);
-    return ativo is not null ? Results.Ok(ativo) : Results.NotFound();
+    return ativo is not null ? Results.Ok(ativo) : Results.NotFound(new { mensagem = $"Ativo com ID {id} não encontrado" });
 })
 .WithName("GetAtivoPorId")
+.WithTags("Force1")
 .WithOpenApi();
 
 try
 {
-    Log.Information("Iniciando aplicação Magma3 Backend Assessment");
+    Log.Information("===========================================");
+    Log.Information("Iniciando Magma3 Backend Assessment API");
+    Log.Information("Ambiente: {Environment}", app.Environment.EnvironmentName);
+    Log.Information("===========================================");
+    
     app.Run();
 }
 catch (Exception ex)
