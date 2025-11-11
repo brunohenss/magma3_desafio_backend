@@ -11,7 +11,7 @@ public class Produto
     public string Nome { get; set; } = string.Empty;
 
     [Required(ErrorMessage = "O preço é obrigatório")]
-    [Range(typeof(decimal), "0.01", "79228162514264337593543950335", ErrorMessage = "O preço deve ser maior que zero")]
+    [Range(0.01, 999999999, ErrorMessage = "O preço deve ser maior que zero")]
     public decimal Preco { get; set; }
 
     public DateTime DataCriacao { get; set; } = DateTime.UtcNow;

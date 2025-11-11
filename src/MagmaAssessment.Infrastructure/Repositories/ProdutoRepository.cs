@@ -22,14 +22,35 @@ public class ProdutoRepository : IProdutoRepository
 
     private void SeedData()
     {
+        _logger.LogInformation("inicializando seed data de produtos");
+
         var produtosIniciais = new List<Produto>
         {
-            new Produto { Id = GetNextId(), Nome = "Notebook Dell Inspiron", Preco = 3500.00m},
-            new Produto { Id = GetNextId(), Nome = "Desktop Advantech PcTop10", Preco = 2200.00m},
-            new Produto { Id = GetNextId(), Nome = "Monitor LG TH9000 LED", Preco = 1500.00m},
-            new Produto { Id = GetNextId(), Nome = "Teclado Logitech Mx Master", Preco = 200.00m},
-            new Produto { Id = GetNextId(), Nome = "Servidor Dell Advanced", Preco = 10000.00m},
+            new Produto { Nome = "Notebook Dell Inspiron 15", Preco = 3500.00m },
+            new Produto { Nome = "Desktop Advantech PcTop10", Preco = 2200.00m },
+            new Produto { Nome = "Monitor LG TH9000 LED 27\"", Preco = 1500.00m },
+            new Produto { Nome = "Teclado Logitech MX Keys", Preco = 450.00m },
+            new Produto { Nome = "Mouse Logitech MX Master 3", Preco = 350.00m },
+            new Produto { Nome = "Webcam Logitech C920 HD", Preco = 450.00m },
+            new Produto { Nome = "Servidor Dell PowerEdge R740", Preco = 15000.00m },
+            new Produto { Nome = "Switch Cisco Catalyst 2960", Preco = 3500.00m },
         };
+
+        foreach (var produto in produtosIniciais)
+        {
+            produto.Id = GetNextId();
+            produto.DataCriacao = DateTime.UtcNow;
+            produto.Ativo = true;
+
+            if (_produtos.TryAdd(produto.Id, produto))
+            {
+                _logger.LogDebug(
+                    "produto seed adicionado: Id={Id}, Nome={Nome}, Preço={Preco:C}",
+                    produto.Id, produto.Nome, produto.Preco);
+            }
+        }
+
+        _logger.LogInformation("seed data carregado com sucesso: {Count} produtos", produtosIniciais.Count);
     }
 
     private int GetNextId()

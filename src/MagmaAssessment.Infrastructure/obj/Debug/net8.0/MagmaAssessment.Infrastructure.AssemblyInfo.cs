@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MagmaAssessment.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74c8aef5eeccf4ca8e7b41d109c1d66f574b8b2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de6d829db1e32eb582837531533964284c7c899f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MagmaAssessment.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MagmaAssessment.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

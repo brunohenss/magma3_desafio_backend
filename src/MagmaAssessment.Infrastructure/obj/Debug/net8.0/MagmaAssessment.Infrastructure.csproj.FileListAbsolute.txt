@@ -20,3 +20,13 @@
 /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/Debug/net8.0/MagmaAssessment.Infrastructure.AssemblyInfo.cs
 /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/Debug/net8.0/MagmaAssessment.Infrastructure.csproj.CoreCompileInputs.cache
 /home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/Debug/net8.0/MagmaAssessment.Infrastructure.sourcelink.json
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/bin/Debug/net8.0/MagmaAssessment.Infrastructure.deps.json
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/bin/Debug/net8.0/MagmaAssessment.Infrastructure.dll
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/bin/Debug/net8.0/MagmaAssessment.Infrastructure.pdb
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/bin/Debug/net8.0/MagmaAssessment.Core.dll
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/bin/Debug/net8.0/MagmaAssessment.Core.pdb
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/Debug/net8.0/MagmaAssessment.Infrastructure.csproj.CopyComplete
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/Debug/net8.0/MagmaAssessment.Infrastructure.dll
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/Debug/net8.0/refint/MagmaAssessment.Infrastructure.dll
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/Debug/net8.0/MagmaAssessment.Infrastructure.pdb
+/home/brunohenss/Disk2/Projetos/magma3_desafio_tec/magma2_desafio_tecnico_v2.0/magma3_desafio_backend/src/MagmaAssessment.Infrastructure/obj/Debug/net8.0/ref/MagmaAssessment.Infrastructure.dll

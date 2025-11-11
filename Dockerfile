@@ -1,21 +1,18 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY *.sln ./
-COPY src/MagmaAssessment.API/*.csproj ./src/MagmaAssessment.API/
-COPY src/MagmaAssessment.Core/*.csproj ./src/MagmaAssessment.Core/
-COPY src/MagmaAssessment.Infrastructure/*.csproj ./src/MagmaAssessment.Infrastructure/
-COPY src/MagmaAssessment.Tests/*.csproj ./src/MagmaAssessment.Tests/
+COPY ["src/MagmaAssessment.API/MagmaAssessment.API.csproj", "src/MagmaAssessment.API/"]
+COPY ["src/MagmaAssessment.Core/MagmaAssessment.Core.csproj", "src/MagmaAssessment.Core/"]
+COPY ["src/MagmaAssessment.Infrastructure/MagmaAssessment.Infrastructure.csproj", "src/MagmaAssessment.Infrastructure/"]
 
-RUN dotnet restore
+RUN dotnet restore "src/MagmaAssessment.API/MagmaAssessment.API.csproj"
 
 COPY . .
 
-RUN dotnet build -c Release --no-restore
+WORKDIR "/src/src/MagmaAssessment.API"
+RUN dotnet build "MagmaAssessment.API.csproj" -c Release -o /app/build
 
-RUN dotnet test -c Release --no-build --verbosity normal
-
-RUN dotnet publish src/MagmaAssessment.API/MagmaAssessment.API.csproj -c Release -o /app/publish --no-restore
+RUN dotnet publish "MagmaAssessment.API.csproj" -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app

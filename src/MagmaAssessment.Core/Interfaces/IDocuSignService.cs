@@ -1,11 +1,16 @@
 using DocuSign.eSign.Model;
 
-namespace MagmaAssessment.Core.Interfaces
+namespace MagmaAssessment.Core.Interfaces;
+
+public interface IDocuSignService
 {
-    public interface IDocuSignService
-    {
-        Task<List<Envelope>> ListarEnvelopesAsync(string accountId);
-        Task<EnvelopeSummary> EnviarDocumentoAssinaturaAsync(string accountId, string emailDestinatario, string nomeDestinatario, string filePath);
-        Task<Envelope> ObterEnvelopeAsync(string accountId, string envelopeId);
-    }
+    Task<EnvelopeSummary> EnviarDocumentoAssinaturaAsync(
+        string emailDestinatario,
+        string nomeDestinatario,
+        byte[] documentoBytes,
+        string nomeDocumento);
+
+    Task<Envelope> ObterEnvelopeAsync(string envelopeId);
+
+    Task<List<Envelope>> ListarEnvelopesAsync();
 }
